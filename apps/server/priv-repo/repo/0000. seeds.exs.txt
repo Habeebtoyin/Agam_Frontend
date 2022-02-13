@@ -1,0 +1,142 @@
+# Script for populating the database. You can run it as:
+#
+#     mix run priv/repo/seeds.exs
+#
+# Inside the script, you can read and write to any of your
+# repositories directly:
+#
+#     Server.Repo.insert!(%Server.SomeSchema{})
+#
+# We recommend using the bang functions (`insert!`, `update!`
+# and so on) as they will fail if something goes wrong.
+
+alias Server.{Accounts, Repo}
+require Logger
+alias Server.News
+
+create_admin_user_for_the_dashboard = fn ->
+  user_data = %{
+    "name" => "programmer",
+    "email" => "admin@agam.com",
+    "password" => "create password"
+  }
+
+  case Accounts.get_user_by_email("admin@agam.com") do
+    nil ->
+      {:ok, user} = Accounts.register_user(user_data)
+      {enconded_token, user_token} = Accounts.UserToken.build_email_token(user, "confirm")
+      Repo.insert!(user_token)
+
+      Accounts.confirm_user(enconded_token)
+      Logger.info("Admin user #{user.name} are created sucefully")
+
+    %Server.Accounts.User{} ->
+      Logger.info("Admin user exists, skip creation")
+  end
+end
+
+create_news_for_starter_website = fn ->
+  if News.list_news() |> length > 0 do
+    Logger.info("News exists in the database, skip creation")
+  else
+    news = [
+      %{
+        title:
+          "Tres claves para explicar a los inversores españoles la importancia del ETF del bitcoin de EEUU",
+        body: """
+        Noticia relacionada El bitcoin sube más de un 50% desde la prohibición de China: a por los $100.000 Los futuros siguen el precio al contado del bitcoin de forma indirecta mediante el uso de contratos supervisados por la Bolsa Mercantil de Chicago (CME or sus siglas en inglés). También requieren que los inversores pongan dinero en efectivo para operar, como una forma de garantía. Los operadores suelen utilizar los futuros para apostar por los movimientos de los precios, como por ejemplo para vender el precio del bitcoin o para cubrir otras apuestas, pero tanto el bitcoin como sus futuros se mueven al unísono prácticamente.
+        Desde este martes, ProShares se apuntará el hito histórico de ser la primera firma que pone en marcha un fondo cotizado del activo digital basado en estos derivados. Debutará en Wall Street bajo el ticker BITOp
+        """,
+        img: "https://d4-invdn-com.investing.com/content/pica2774da47d2487de97c3b8e47503308d.jpg",
+        published: true
+      },
+      %{
+        title: "2 razones por las que el Bitcoin se puede disparar un 170% con ETF",
+        body: """
+        Investing.com - Bitcoin tiene la posibilidad de aumentar su valor de manera muy notable en los últimos meses de 2021.
+        Según Tom Lee, fundador de Fundstrat y fan de las criptomonedas, el lanzamiento del fondo ProShares podría ayudar a catalizar más copras en Bitcoin por una serie de nuevos inversores individuales. Y como resultado, los precios de Bitcoin podrían aumentar, recoge MarketWatch. De hecho, según este experto, los precios podrían alcanzar los 168.000 dólares para fin de año, un 170% más.
+        Se espera que el proveedor de fondos ProShares lance el Bitcoin Strategy ETF (NYSE:BITO) este martes, convirtiéndose en el primer ETF de EE.UU. vinculado a las criptomonedas, un hito para el sector.
+        La perspectiva de un ETF, que en teoría ofrecerá a más inversores acceso a Bitcoin sin tener que preocuparse por la custodia del activo virtual, ha llevado los precios de bitcoin a un récord cercano a los 65.000 dólares.
+        Lee dice que uno de los dos factores principales que probablemente impulsará los precios de Bitcoin al alza es la expectativa de que el lanzamiento del nuevo ETF atraiga importantes flujos de entrada. La segunda razón es que una parte de los inversores está actualmente expuesta a bitcoin y similares, con una nueva vía hacia la propiedad que probablemente respaldará más compras.
+        'Las criptomonedas son aproximadamente el 1% de los activos líquidos asignados', escribió el fundador de Fundstrat, recoge MarketWatch.
+        Sin embargo, Lee sugiere que las entradas a futuros del ETF servirán como un nuevo impulsor clave a corto plazo para el precio del Bitcoin.
+        Lee especula que la demanda de ETF de Bitcoin podría aumentar en 50 millones de dólares por día, si BITO resulta ser un ETF tan popular como Invesco QQQ Trust (NASDAQ:QQQ), por ejemplo. Los QQQ cuentan con unos 190.999 millones de dólares en activos, y otro fondo relacionado con Bitcoin, Grayscale Bitcoin Trust (BTC) (OTC:GBTC), tiene alrededor de 32.000 millones en activos, lo que lo convierte en el mayor fondo criptográfico.m
+        """,
+        img: "https://i-invdn-com.investing.com/news/news_arrow_up_800x533_L_1414401892.jpg",
+        published: true
+      },
+      %{
+        title: "Una métrica de Bitcoin se prepara para volverse verde por primera vez en 6 meses",
+        body: """
+        Una señal "favorita" de precio de Bitcoin (BTC) podría estar a punto de volverse alcista, y siempre ha resultado alcista, según los datos.
+        Como señaló el presentador del podcast Preston Pysh el 18 de octubre, la Relación de Precios Realizados del Titular de Largo y Corto Plazo (LTHSTH-RPR) parece preparada para imprimir una bandera alcista.
+        El Departamento del Tesoro de EE.UU. dice que debe "modernizarse y adaptarse" a las monedas digitales
+        El gráfico apunta al regreso del impulso alcista Puee sonar a palabrería, pero el LTHSTH-RPR es uno de los indicadores de precios de Bitcoin más precisos. Su creador, el organizador de la conferencia Bitcoin 2021, Dylan LeClair, confirmó su propia tendencia alcista basándose en sus lecturas a finales de septiembre.d
+        """,
+        img: "https://i-invdn-com.investing.com/news/LYNXMPEDA71MJ_L.jpg",
+        published: true
+      }
+    ]
+
+    for new <- news, do: News.create_article(new)
+    Logger.info("News Created!")
+  end
+end
+
+create_investment_types_for_the_dashboard = fn ->
+  if length(Server.Investment.list_investments()) > 0 do
+    Logger.info("Types of basic investments exists in the database, skip creation")
+  else
+    investment_types = [
+      %{
+        title: "Ultra conservador",
+        body: """
+        FCI 1. Este Fondo de inversión mantiene un 95% del capital en moneda estable DAI y un 5% en el token nativo IDI. Presenta poca volatilidad y un rendimiento anual neto muy atractivo para el inversor que opta por estabilidad versus rendimiento.
+        La comisión de entrada es de 0.05% y la comisión de salida es del 0%.
+        El horizonte de inversión recomendado es de 6 meses como mínimo.
+        """,
+        img: "https://images2.imgbox.com/7a/a6/O3X4meXU_o.jpg",
+        likes: 11
+      },
+      %{
+        title: "Ultra conservador",
+        body: """
+        Este Fondo de inversión mantiene un 100% del capital en moneda estable, en la proporción 50%-50% entre USDT y USDC. Presenta menor volatilidad que el primer fondo con token nativo IDI y un rendimiento anual neto atractivo para el inversor que opta por estabilidad versus rendimiento.
+        La comisión de entrada es de 0.05% y la comisión de salida es del 0%.
+        El horizonte de inversión recomendado es de 1 mes como mínimo.
+        """,
+        img: "https://images2.imgbox.com/74/cd/8oToKt9b_o.jpg",
+        likes: 10
+      },
+      %{
+        title: "Fondo moderado",
+        body: """
+        Este Fondo de inversión mantiene un 75% del capital en moneda estable y un 25% en monedas no estables como BTC Y ETH. Presenta volatilidad media y un mejor rendimiento anual que los fondos conservadores. Está sujeto a las pérdidas impermanentes. Para más información de las pérdidas impermanentes revisar las FAQs.
+        La comisión de entrada es de 0.05% y la comisión de salida es del 0%.
+        El horizonte de inversión recomendado es de 3 años en adelante.
+        """,
+        img: "https://images2.imgbox.com/4a/ed/1HdQnBiY_o.jpg",
+        likes: 72
+      },
+      %{
+        title: "Fondo agresivo",
+        body: """
+        Este Fondo de inversión mantiene un 100% del capital en moneda BTC. Presenta mucha volatilidad y un rendimiento anual neto muy atractivo para el inversor que opta por rendimiento versus estabilidad.
+        La comisión de entrada es de 0.05% y la comisión de salida es del 0%.
+        El horizonte de inversión recomendado es de 5 años en adelante.
+        """,
+        img: "https://images2.imgbox.com/bd/33/sStbt7XG_o.jpg",
+        likes: 23
+      }
+    ]
+
+    for type_of_invest <- investment_types,
+        do: Server.Investment.create_invest_type(type_of_invest)
+
+    Logger.info("Types of basic investments created sucefully!")
+  end
+end
+
+create_admin_user_for_the_dashboard.()
+create_news_for_starter_website.()
+create_investment_types_for_the_dashboard.()

@@ -1,0 +1,15 @@
+<div class="card bordered" role="news">
+      <figure>
+        <img src="<%= @img %>">
+      </figure> 
+      <div class="card-body">
+
+        <h2 class="card-title"> <%= @title %>
+          <div class="mx-2 badge badge-secondary">NEW</div>
+        </h2> 
+        <p class="text-xl"><%= @text %></p> 
+        <div class="justify-end card-actions">
+          <%= link @button, to: Routes.news_path(@conn, :show, :es, @id), class: "btn btn-secondary"%>
+        </div>
+      </div>
+    </div>

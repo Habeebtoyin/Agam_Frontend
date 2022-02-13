@@ -1,0 +1,3 @@
+defmodule ServerWeb.UserSettingsView do
+  use ServerWeb, :view
+end

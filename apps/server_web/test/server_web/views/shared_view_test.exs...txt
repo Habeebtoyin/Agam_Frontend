@@ -1,0 +1,47 @@
+defmodule ServerWeb.SharedViewTest do
+  use ServerWeb.ConnCase, async: true
+  alias ServerWeb.SharedView
+  import Phoenix.View
+
+  # When testing helpers, you may want to import Phoenix.HTML and
+  # use functions such as safe_to_string() to convert the helper
+  # result into an HTML string.
+  # import Phoenix.HTML
+
+  test "Shoud return a {:safe, content} from bitstring" do
+    data = "some content"
+    assert SharedView.trim_text(data, 4) == {:safe, "some"}
+    assert SharedView.trim_text(data, 12) == {:safe, "some content"}
+  end
+
+  test "trim_text/2" do
+    data = ~s(A single title of the post)
+    assert SharedView.trim_text(data, 1) == {:safe, "A"}
+
+    assert SharedView.trim_text(data, 8) == {:safe, "A single"}
+  end
+
+  test "trim_text/2 default values" do
+    data = ~s(A single title of the post)
+    assert SharedView.trim_text(data) == {:safe, "A single title of the post"}
+  end
+
+  test "trim_text/2 empty values " do
+    data = ~s()
+    assert SharedView.trim_text(data) == {:error, "empty value"}
+  end
+
+  test "render header" do
+    conn = get(build_conn(), "/es")
+
+    assert render_to_string(SharedView, "_header.html", conn: conn, current_user: %{}) =~
+             "Buscar mis inversiones"
+  end
+
+  test "render footer" do
+    conn = get(build_conn(), "/")
+
+    assert render_to_string(SharedView, "_footer.html", conn: conn) =~
+             "2022 - AGAM"
+  end
+end

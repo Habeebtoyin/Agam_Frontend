@@ -1,0 +1,22 @@
+.navbar {
+	@apply relative flex items-center justify-between w-full bg-secondary p-0;
+	&_logo {
+		@apply absolute z-10 w-1/4 md:w-1/5 left-4; 
+	}
+	&_left {
+		@apply relative w-4/5 h-24 bg-primary rounded-tr-full rounded-br-full;
+		//@apply relative w-4/5 h-24 bg-gray-700 rounded-tr-full rounded-br-full;
+	}
+
+	&_darkmode {
+		@apply absolute bg-secondary rounded-full -right-4 top-4 w-14 h-14;
+		&--moon {
+			@apply absolute w-10 h-10 text-blue-600 fill-current transform rotate-45 top-2 left-2;
+		}
+	}
+
+	&_icons {
+		@apply w-8 h-8 text-gray-700 fill-current text-primary;
+	}
+
+}

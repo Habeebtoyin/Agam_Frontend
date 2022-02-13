@@ -1,0 +1,12 @@
+.footer {
+	@apply min-h-full bg-primary-content ;
+	&_left {
+		@apply flex justify-around py-12 text-white w-full;
+		> div {
+			@apply font-bold;
+			> p {
+				@apply pb-4 text-lg;
+			}
+		}
+	}
+}

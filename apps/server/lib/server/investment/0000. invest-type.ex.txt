@@ -1,0 +1,25 @@
+defmodule Server.Investment.InvestType do
+  @moduledoc false
+  use Ecto.Schema
+  import Ecto.Changeset
+
+  @primary_key {:id, :binary_id, autogenerate: true}
+  @foreign_key_type :binary_id
+  schema "investments" do
+    field :body, :string
+    field :img, :string
+    field :likes, :integer
+    field :title, :string
+
+    timestamps()
+  end
+
+  @doc false
+  def changeset(invest_type, attrs) do
+    invest_type
+    |> cast(attrs, [:title, :body, :img, :likes])
+    |> validate_length(:title, min: 5)
+    |> validate_length(:body, min: 5)
+    |> validate_required([:title, :body, :img, :likes])
+  end
+end

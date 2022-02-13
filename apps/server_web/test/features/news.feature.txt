@@ -1,0 +1,7 @@
+#language: es
+Caracteristica: Noticias sobre criptomonedas y actualizaciones sobre el mundo defi.
+
+	Escenario: Cuando ingreso a la plataforma, debería de ver mínimamente 3 noticias
+		Dado que me encuentro en la pagina principal y hay una noticia que deseo leer
+		Cuando hago click en el botón <MORE INFO> de esa noticia
+		Entonces debo ver la noticia completa

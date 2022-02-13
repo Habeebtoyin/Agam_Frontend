@@ -1,0 +1,12 @@
+[
+  verbose: false,
+  private: false,
+  skip: false,
+  router: "lib/server_web/router.ex",
+  exit: "low",
+  format: "txt",
+  out: "",
+  threshold: "low",
+  ignore: [""],
+  ignore_files: ["/home/martin/Fuentes/server_umbrella/apps/server_web/config/prod.exs"]
+]

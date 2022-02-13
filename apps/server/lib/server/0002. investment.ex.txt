@@ -1,0 +1,81 @@
+defmodule Server.Investment do
+  @moduledoc """
+  The Investment context.
+  """
+
+  import Ecto.Query, warn: false
+  alias Server.Repo
+
+  alias Server.Investment.InvestType
+
+  @doc """
+  Returns the list of investments.
+  ## Examples
+      iex> list_investments()
+      [%InvestType{}, ...]
+  """
+  def list_investments do
+    Repo.all(InvestType)
+  end
+
+  @doc """
+  Gets a single invest_type.
+  Raises `Ecto.NoResultsError` if the Invest type does not exist.
+  ## Examples
+      iex> get_invest_type!(123)
+      %InvestType{}
+      iex> get_invest_type!(456)
+      ** (Ecto.NoResultsError)
+  """
+  def get_invest_type!(id), do: Repo.get!(InvestType, id)
+
+  @doc """
+  Creates a invest_type.
+  ## Examples
+      iex> create_invest_type(%{field: value})
+      {:ok, %InvestType{}}
+      iex> create_invest_type(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+  """
+  def create_invest_type(attrs \\ %{}) do
+    %InvestType{}
+    |> InvestType.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  @doc """
+  Updates a invest_type.
+  ## Examples
+      iex> update_invest_type(invest_type, %{field: new_value})
+      {:ok, %InvestType{}}
+      iex> update_invest_type(invest_type, %{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+  """
+  def update_invest_type(%InvestType{} = invest_type, attrs) do
+    invest_type
+    |> InvestType.changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  Deletes a invest_type.
+  ## Examples
+      iex> delete_invest_type(invest_type)
+      {:ok, %InvestType{}}
+      iex> delete_invest_type(invest_type)
+      {:error, %Ecto.Changeset{}}
+  """
+  def delete_invest_type(%InvestType{} = invest_type) do
+    Repo.delete(invest_type)
+  end
+
+  @doc """
+  Returns an `%Ecto.Changeset{}` for tracking invest_type changes.
+  ## Examples
+      iex> change_invest_type(invest_type)
+      %Ecto.Changeset{data: %InvestType{}}
+  """
+  def change_invest_type(%InvestType{} = invest_type, attrs \\ %{}) do
+    InvestType.changeset(invest_type, attrs)
+  end
+end

@@ -1,0 +1,31 @@
+defmodule ServerWeb.UserRegistrationControllerTest do
+  use ServerWeb.ConnCase, async: true
+
+  import Server.AccountsFixtures
+
+  describe "POST /admin/Cuentas/Administradores" do
+    @tag :capture_log
+    test "creates account and logs the user in", %{conn: conn} do
+      email = unique_user_email()
+
+      conn =
+        post(conn, Routes.kaffy_resource_path(conn, :create, "Cuentas", "Administradores"), %{
+          "user" => valid_user_attributes(email: email)
+        })
+
+      assert redirected_to(conn)
+    end
+
+    @tag :skip
+    test "render errors for invalid data", %{conn: conn} do
+      conn =
+        post(conn, Routes.kaffy_resource_path(conn, :create, "Cuentas", "Administradores"), %{
+          "user" => %{"email" => "with spaces", "password" => "too short"}
+        })
+
+      response = html_response(conn, 200)
+      assert response =~ "must have the @ sign and no spaces"
+      assert response =~ "should be at least 12 character"
+    end
+  end
+end

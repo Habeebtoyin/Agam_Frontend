@@ -1,0 +1,39 @@
+<div class="flex justify-center mt-8">
+  <div class="w-2/3">
+    <h2 class="text-2xl font-bold text-center"> <%= gettext "Acerca de nosotros" %></h2>
+<p class="py-8 text-xl">
+  <%= gettext "AGAM (Automatic Global Asset Manager) es un administrador automático de cartera, donde se producen intercambios descentralizados (DEX) en la red Polygon.
+  Permite a cualquier persona con una billetera configurada en Polygon de Metamask comerciar instantáneamente a precios determinados por el mercado.
+  Con el sistema que tiene AGAM, en lugar de pagar las tarifas a los gerentes de activos para reequilibrar su cartera, cobrará tarifas de los comerciantes que reequilibran su cartera siguiendo las oportunidades de arbitraje." %>
+</p>
+
+
+<h3 class="text-xl font-bold "> <%= gettext "OBJETIVOS" %></h3>
+  <ul class="py-4">
+    <li class="text-xl list-disc"> <%= gettext "La idea AGAM es introducir al inversor tradicional en el nuevo ámbito de las DeFi, aportando educación financiera, mediante documentos, soporte de atención al cliente y videos explicativos, con la intención de ayudar a los inversores que recién están dando sus primeros pasos, sin descuidar tampoco, a los más experimentados." %></li>
+    <li class="text-xl list-disc"> <%= gettext "A futuro se implementarán tokens sintéticos de acciones y de divisas para replicar los rendimientos obtenidos por los activos tradicionales en la bolsa, sin la volatilidad que existe en las inversiones de criptomonedas, pero con la innovación de los contratos inteligentes, que evitan los costos de un administrador de portafolios, y tratando de unificar lo mejor de ambos mundos." %></li>
+    <li class="text-xl list-disc"> <%= gettext "AGAM tendrá su propio token nativo deflacionario, llamado AGA, que será utilizado como token de gobernanza y de intercambio para mercados de NFT, apuestas deportivas, lotería y juegos de casino." %></li>
+  </ul>
+
+<h3 class="text-xl font-bold "> <%= gettext "Misión" %></h3>
+  <ul class="py-4">
+    <li class="text-xl list-disc"> <%= gettext "Beneficio: Maximizar los rendimientos para los inversores al tiempo que se mantienen las responsabilidades corporativas de la compañía." %></li>
+    <li class="text-xl list-disc"> <%= gettext "Productividad: ser una organización eficaz, dinámica y en constante crecimiento." %></li>
+  </ul>
+
+<h3 class="text-xl font-bold "> <%= gettext "Visión" %></h3>
+  <ul class="py-4">
+    <li class="text-xl list-disc"><%= gettext "Llegar al pequeño inversor que no cuenta con experiencia en criptomonedas o en finanzas en general."  %></li>
+    <li class="text-xl list-disc"><%= gettext "Llegar a inversores de todo el mundo."  %></li>
+    <li class="text-xl list-disc"><%= gettext "Lograr mejorar las finanzas personales del cliente."  %></li>
+    <li class="text-xl list-disc"><%= gettext "Crear valor y marcar la diferencia."  %></li>
+  </ul>
+
+<h3 class="text-xl font-bold "> <%= gettext "Valores" %></h3>
+  <ul class="py-4">
+    <li class="text-xl list-disc">  <%= gettext "Integridad: ser transparentes y responsables." %></li>
+    <li class="text-xl list-disc">  <%= gettext "Calidad: búsqueda de la excelencia." %></li>
+    <li class="text-xl list-disc">  <%= gettext "Mejora continua: ofrecer el mejor y más actualizado servicio al cliente" %></li>
+  </ul>
+  </div>
+</div>

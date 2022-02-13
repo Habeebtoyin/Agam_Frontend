@@ -1,0 +1,21 @@
+<div class="flex justify-center w-full mt-12">
+  <div>
+    <h1 class="my-4 text-2xl font-bold">¿Olvidaste tu contraseña?</h1>
+
+    <%= form_for :user, Routes.user_reset_password_path(@conn, :create), fn f -> %>
+      <div class="my-8">
+        <%= label f, :email, class: "block" %>
+        <%= email_input f, :email, required: true, class: "text-gray-500" %>
+      </div>
+
+      <div class="text-blue-500">
+        <%= submit "Enviarme instrucciones para reiniciar mi contraseña" %>
+      </div>
+    <% end %>
+
+    <p>
+      <%#= link "Registro", to: Routes.user_registration_path(@conn, :new) %>
+      <%= link "Ingresar", to: Routes.user_session_path(@conn, :new), class: "text-blue-500" %>
+    </p>
+  </div>
+</div>

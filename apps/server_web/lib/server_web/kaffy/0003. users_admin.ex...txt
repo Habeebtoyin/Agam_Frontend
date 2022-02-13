@@ -1,0 +1,69 @@
+defmodule ServerWeb.Kaffy.UsersAdmin do
+  @moduledoc false
+  alias Server.Accounts
+  alias ServerWeb.Router.Helpers, as: Routes
+
+  def index(_) do
+    [
+      name: %{name: "name", type: :text},
+      email: %{name: "email", type: :text},
+      inserted_at: %{
+        name: "Created at",
+        value: fn p -> Calendar.strftime(p.inserted_at, "%Y-%m-%d %H:%M:%S") end
+      },
+      updated_at: %{
+        name: "updated at",
+        value: fn p -> Calendar.strftime(p.inserted_at, "%Y-%m-%d %H:%M:%S") end
+      },
+      confirmed_at: %{
+        name: "validated account?",
+        value: fn p -> if p.confirmed_at == nil, do: "NOT VALIDATED", else: "VALIDATED" end
+      }
+    ]
+  end
+
+  def form_fields(_) do
+    [
+      name: %{
+        type: :text,
+        name: "name",
+        label: "name",
+        create: :editable
+      },
+      email: %{
+        type: :text,
+        name: "email",
+        create: :editable
+      },
+      password: %{
+        type: :password,
+        create: :editable,
+        update: :hidden,
+        name: "password"
+      },
+      confirmed_at: %{
+        name: "validated account?",
+        type: :text,
+        value: fn p -> if p.confirmed_at == nil, do: "not validated", else: "validated" end,
+        create: :hidden
+      }
+    ]
+  end
+
+  def insert(%Plug.Conn{params: %{"user" => user_params}} = conn, _changeset) do
+    record =
+      case Accounts.register_user(user_params) do
+        {:ok, user} ->
+          {:ok, _} =
+            Accounts.deliver_user_confirmation_instructions(
+              user,
+              &Routes.user_confirmation_url(conn, :confirm, &1)
+            )
+
+        {:error, %Ecto.Changeset{} = changeset} ->
+          changeset
+      end
+
+    {:ok, record}
+  end
+end

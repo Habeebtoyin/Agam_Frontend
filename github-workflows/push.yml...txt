@@ -1,0 +1,72 @@
+on:
+  push:
+    branches-ignore: 
+      - master
+
+jobs:
+  unit-testing:
+
+    runs-on: ubuntu-latest
+    services:
+      db:
+        image: postgres:latest
+        ports: ["5432:5432"]
+        env:
+          POSTGRES_PASSWORD: ${{secrets.DATABASE_PASSWORD_TEST}}
+          POSTGRES_USER: ${{ secrets.DATABASE_USER_TEST}}
+          
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+          
+    steps:
+      - uses: actions/checkout@v2
+      - uses: erlef/setup-beam@v1
+
+        with:
+          otp-version: '23'
+          elixir-version: '1.12.2'  
+
+      - name: Restore dependencies cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            deps
+            _build
+          key: ${{ runner.os }}-mycache-${{ secrets.CACHE_VERSION }}-${{hashFiles('**/mix.*')}}
+          restore-keys: |
+            ${{ runner.os }}-mycache-${{ secrets.CACHE_VERSION }}-${{ hashFiles('**/mix.*') }}
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: mix deps.get
+      
+      - name: Unit testing
+        env:
+          MIX_ENV: test
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # BD_HOST: ${{ secrets.BD_HOST }}
+          BD_PWD: ${{ secrets.DATABASE_PASSWORD_TEST }}
+          BD_USER: ${{ secrets.DATABASE_USER_TEST }}
+        run: mix test
+        
+  check-format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: erlef/setup-beam@v1
+        with: 
+          otp-version: '23'
+          elixir-version: '1.12.2'
+      
+      - name: Restore dependencies cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            deps
+            _build
+          key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-mix-
+      - name: Install dependencies
+        run: mix deps.get
+        
+      - name: Check Format
+        run: mix format --check-formatted

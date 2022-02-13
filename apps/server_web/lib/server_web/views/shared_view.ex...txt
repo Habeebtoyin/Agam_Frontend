@@ -1,0 +1,16 @@
+defmodule ServerWeb.SharedView do
+  use ServerWeb, :view
+  import Phoenix.View
+
+  def trim_text(""), do: {:error, "empty value"}
+
+  def trim_text(data) when is_bitstring(data),
+    do: trim_text(data, String.length(data))
+
+  def trim_text(data, length) when is_bitstring(data) do
+    data
+    |> String.split_at(length)
+    |> elem(0)
+    |> html_escape()
+  end
+end

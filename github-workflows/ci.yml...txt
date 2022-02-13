@@ -1,0 +1,118 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  Testing-and-Coverage:
+    runs-on: ubuntu-latest
+    services:
+      db:
+        image: postgres:latest
+        ports: ["5432:5432"]
+        env:
+          POSTGRES_USER: ${{ secrets.DATABASE_USER_TEST}}
+          POSTGRES_PASSWORD: ${{secrets.DATABASE_PASSWORD_TEST}}
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    steps:
+      - uses: actions/checkout@v2
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '23'
+          elixir-version: '1.12.2'  
+    
+      - name: Restore dependencies cache
+        uses: actions/cache@v2
+        with:
+          path: deps
+          key: ${{ runner.os }}-mycache-${{ secrets.CACHE_VERSION }}-${{hashFiles('**/mix.*')}}
+          restore-keys:  ${{ runner.os }}-mycache-${{ secrets.CACHE_VERSION }}-${{hashFiles('**/mix.*')}}
+          
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: mix deps.get
+      - name: Install nodejs dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm install --prefix=apps/server_web/assets
+
+      
+      - name: Unit testing
+        env:
+          MIX_ENV: test
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BD_HOST: ${{ secrets.BD_HOST }}
+          BD_PWD: ${{ secrets.BD_PWD }}
+          BD_USER: ${{ secrets.BD_USER }}
+        run: mix test && mix coveralls.github
+ 
+  code-linter:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+     - uses: erlef/setup-beam@v1
+       with:
+         otp-version: '23'
+         elixir-version: '1.12.2'  
+     - name: Restore dependencies cache
+       uses: actions/cache@v2
+       with:
+        path: deps
+        key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
+        restore-keys: ${{ runner.os }}-mix-
+     
+     - name: Install dependencies
+       run: mix deps.get
+        
+     - name: Code Linter With Credo
+       run: mix credo --strict
+
+
+  security-checks:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+     - uses: erlef/setup-beam@v1
+       with:
+         otp-version: '23'
+         elixir-version: '1.12.2'  
+         
+     - name: Restore dependencies cache
+       uses: actions/cache@v2
+       with:
+        path: deps
+        key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
+        restore-keys: ${{ runner.os }}-mix-
+     
+     - name: Install dependencies
+       run: mix deps.get
+       
+     - name: Run security checks with sobelow
+       run: mix sobelow -r apps/server_web --exit
+       
+     - name: Dependency Check
+       uses: dependency-check/Dependency-Check_Action@1.1.0
+       with:
+        project: 'agam'
+        path: '.'
+        format: 'HTML'
+        
+     - name: Upload Test results
+       uses: actions/upload-artifact@master
+       with:
+        name: Depcheck report
+        path: ${{github.workspace}}/reports
+
+  build-for-production:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: erlef/setup-beam@v1
+      with:
+        otp-version: '23'
+        elixir-version: '1.12.2'  
+    - name: Clean application
+      run: |
+        rm -rf _build deps
+        mix do deps.get, deps.compile
+        mix phx.digest
+        mix compile

@@ -1,0 +1,43 @@
+<div class="flex justify-center mb-8">
+  <div class="w-2/3 mt-8">
+    <h1 class="mb-8 text-3xl font-bold text-center"><%= gettext "Términos de uso" %></h1>
+
+    <h3 class="pb-4 text-xl font-bold"><%= gettext "Información importante" %></h3>
+
+    <p>
+      <%= gettext "Lea esta información detenidamente, ya que rige el uso del sitio web de Agam. Si utiliza el sitio web, estará aceptando los Términos de uso que aparecen a continuación. Los Términos de uso están sujetos a cambios en cualquier momento sin previo aviso. Igualmente todas las novedades y noticias relevantes serán colocadas en el apartado News de la página web.
+      Las personas que ingresan a este sitio web deben consultar a sus asesores profesionales sobre si requieren algún consentimiento gubernamental o de otro tipo o si deben cumplir con cualquier formalidad que les permita usar o invertir en cualquier producto mencionado en el sitio web.
+      Siempre que haga una inversión, sepa dónde está colocando el dinero y nunca coloque dinero que necesite para las necesidades primarias, tales como alimentación, energía o deudas, por ejemplo.
+      Invirtiendo en Agam usted tiene la tranquilidad de estar inviertiendo en una plataforma de inversión con fundamentos. Agam invierte en canastas de criptomonedas con distinto nivel de riesgo. El nivel de riesgo lo elige el cliente, y para hacerlo bien, se recomienda hacer el Test del inversor." %>
+       </p>
+
+    <h3 class="pb-4 mt-8 text-xl font-bold"><%= gettext "Estado reglamentario" %></h3>
+
+    <p>
+      <%= gettext "Agam es un administrador automático de cartera, donde se producen intercambios descentralizados (DEX) en la red Polygon. Opera como broker, en fondos comunes de inversión, que consta de canastas de criptoactivos con distintos niveles de riesgo.
+      El dinero que el cliente envía con destino a invertir, va directamente a DeFi donde instantaneamente se descuenta la comisión que es enviada a una cuenta del negocio y el resto del dinero va hacia la canasta de inversión correspondiente. En ningún momento Agam retiene el dinero. 
+      El sitio web tiene como fin ser una presentación a los distintos tipos de inversión en criptoactivos y la plataforma donde el cliente realiza la inversión. También se muestran noticias relevantes e información sobre el negocio. El cliente se registra, inicia sesión y luego realiza la inversión que el mismo desee. 
+      Agam no se responsabiliza por pérdidas del dinero que el cliente envíe, u otros problemas, derivados de haber efectuado mal alguna operación, por eso es importante que lea detenidamente la explicación proveída en el tutorial." %>
+    </p>
+
+    <h3 class="pb-4 mt-8 text-xl font-bold"><%= gettext "Exactitud de la información" %></h3>
+    <p> 
+      <%= gettext "Toda la información en el sitio web refleja el juicio de Agam en el momento en que dicha información se publicó en el sitio web o en la fecha indicada (si corresponde) y está sujeta a cambios sin previo aviso. Parte del material contenido en el sitio web, puede haber sido preparado por terceros. Agam no es responsable ni respalda el contenido de la información proporcionada por dichos terceros.
+      Si bien Agam considera que la información contenida en este sitio web se basa en fuentes que considera confiables, Agam no puede garantizar y no garantiza la precisión, oportunidad, adecuación o integridad de dicha información, ni Agam tiene la obligación de corregir, actualizar o complementar dicha información o notificarle cualquier cambio." %>
+       </p>
+
+    <h3 class="pb-4 mt-8 text-xl font-bold"><%= gettext "Riesgos de inversión" %></h3>
+    <p> <%= gettext "El valor de una inversión y los ingresos derivados de ella pueden tanto subir como bajar y es posible que los inversores no recuperen la cantidad invertida. 
+      Debido a los riesgos involucrados, la inversión en un fondo común de Agam con riesgo moderado o agresivo, sólo es adecuada para inversores sofisticados que pueden soportar la pérdida de una parte sustancial o incluso de todo el dinero que invierten en el fondo sin alterar su nivel de vida, que entienden que el alto grado de riesgo involucrado es adecuado en función de sus objetivos de inversión y necesidades financieras, y no tienen necesidad de liquidez de las inversiones." %></p>
+
+    <h3 class="pb-4 mt-8 text-xl font-bold"><%= gettext "Garantías y seguros" %></h3>
+    <p> <%= gettext "Agam no se hace responsable ni garantiza recupero del capital del cliente en caso de un hackeo y robo de dinero en cualquiera de los fondos comunes de inversion." %></p>
+
+    <h3 class="pb-4 mt-8 text-xl font-bold"> <%= gettext "Información personal" %></h3>
+    <p> <%= gettext "Agam y procesadores de datos que tienen acceso y están asociados con el procesamiento de datos personales, están obligados a respetar la confidencialidad de los datos personales." %> </p>
+
+    <h3 class="pb-4 mt-8 text-xl font-bold">Cookies</h3>
+
+    <p> <%= gettext "Al utilizar el sitio web, puede tener la tranquilidad que Agam no colocará cookies en su dispositivo. Las cookies son archivos de texto que contienen pequeñas cantidades de información que se descargan en su dispositivo cuando visita un sitio web. Luego, las cookies se envían de vuelta al sitio web de origen en cada visita posterior, o a otro sitio web que reconoce esa cookie." %></p>
+  </div>
+</div>

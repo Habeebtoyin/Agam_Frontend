@@ -1,0 +1,3 @@
+defmodule ServerWeb.NewsView do
+  use ServerWeb, :view
+end

@@ -1,0 +1,25 @@
+<section class="steps_component">
+  <div>
+    <span class="steps_component_icon">1</span>
+    <div>
+      <h2 class="steps_component_title" >Registrese</h2>
+      <p class="steps_component_text">para poder operar dentro de la plataforma y visualizar el progreso de sus inversiones</p>
+    </div>
+  </div>
+
+  <div class="flex mt-20">
+    <span class="steps_component_icon">2</span>
+    <div>
+      <h2 class="steps_component_title" >Realice el test del inversor</h2>
+      <p class="steps_component_text">mediante este test, el sistema creara un perfil de inversión adecuado para usted</p>
+    </div>
+  </div>
+
+  <div class="flex mt-20">
+    <span class="steps_component_icon">3</span>
+    <div>
+      <h2 class="steps_component_title" >Comience a invertir!</h2>
+      <p class="steps_component_text">Conecte su wallet y comience a realizar las inversiones de su preferencia. <br/>Si tiene dudas, puede visitar nuestro tutorial básico </p>
+    </div>
+  </div>
+</section>

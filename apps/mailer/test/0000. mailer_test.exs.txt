@@ -1,0 +1,95 @@
+defmodule MailerTest do
+  use ExUnit.Case, async: true
+
+  alias Mailer.{AccountActivation, Notifications}
+  alias Server.Accounts.User
+  alias Swoosh.Email
+  import Swoosh.TestAssertions
+
+  describe "Mailer.parse_message" do
+    setup do
+      user = %User{
+        name: "programmer",
+        email: "mail"
+      }
+
+      activation_link = "https://misuperactivationlink.com/78392472shj"
+      {:ok, user: user, link: activation_link, email: %Swoosh.Email{}}
+    end
+
+    test "should be return a html with the user.name and the activation link inside", %{
+      user: user,
+      link: link
+    } do
+      sut = Notifications.activate_account_html_message(user, link)
+      assert sut =~ "programmer"
+      assert sut =~ "<mail>"
+    end
+
+    test "should be add html message to current email", %{email: email, user: user, link: link} do
+      new_mail =
+        Notifications.parse_message(email, fn ->
+          Notifications.activate_account_html_message(user, link)
+        end)
+
+      assert new_mail.html_body =~ user.name
+      assert new_mail.html_body =~ "<#{user.email}>"
+      assert new_mail.html_body =~ link
+    end
+
+    test "should be parse and send email with the custom html", %{user: user, link: link} do
+      mail = Notifications.notify_account_activation(user, link)
+      assert mail.html_body =~ user.name
+      assert mail.html_body =~ link
+      Mailer.deliver(mail)
+      assert_email_sent(mail)
+    end
+  end
+
+  describe "Mailer.AccountActivation.activate_account/2" do
+    setup do
+      user = %User{
+        name: "programmer",
+        email: "mail",
+        password: "create password"
+      }
+
+      msg = """
+      Some extra large message
+      Welcome  programmer
+      """
+
+      data = %Swoosh.Email{} = AccountActivation.activate_account(user, msg)
+      {:ok, mail: data, user: user}
+    end
+
+    test "when is called with a user structure and a message then should return a Swoosh.Email structure",
+         %{mail: mail} do
+      assert {"Administrador", "admin@agam.com"} == mail.from
+    end
+
+    test "should be send email with the AccountActivation data filled inside", %{mail: mail} do
+      Mailer.deliver(mail)
+      assert_email_sent(mail)
+    end
+
+    test "You should prepare the message to be sent to the user to confirm the resset password",
+         %{user: user} do
+      msg = """
+      ==============================
+      Hi #{user.email},
+      You can confirm your account by visiting the URL below:
+      link
+      If you didn't create an account with us, please ignore this.
+      ==============================
+      """
+
+      sut = Notifications.notify(user, msg)
+
+      assert %Email{
+               from: {"Administrator", "admin@agam.com"},
+               to: [{"programmer", "mail"}]
+             } = sut
+    end
+  end
+end

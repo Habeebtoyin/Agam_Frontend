@@ -1,0 +1,121 @@
+<div class="mx-8 mt-8">
+  <h2 class="mx-auto mt-8">
+    <%= gettext "Si recien esta comenzando a invertir en criptomonedas," %>
+    <%= gettext "lo invitamos a completar este breve cuestionario que nos permitira recomendarle el tipo de inversion que mas se adapte a su perfil." %>
+  </h2>
+
+<div class="divide-y-4 divide-yellow-600 divide-dashed">
+  <div class="text-left my-8">
+    <h2 class="my-8"> <%= gettext "¿Cuanto dinero desea comenzar a invertir en criptomonedas?" %></h2>
+    <select id="invertir" name="invertir" class="select select-bordered w-full max-w-xs">
+      <option value="0"><%= gettext "0 a 1000 usd" %></option>
+      <option value="3" selected><%= gettext "1000 - 2000 usd" %></option>
+      <option value="6"><%= gettext "2000 - 5000 usd" %></option>
+      <option value="8"><%= gettext "Mas de 5000 usd" %></option>
+    </select>
+  </div>
+
+  <div class="text-left my-8">
+    <h2 class="my-8"><%= gettext "¿Qué porcentaje de tus ahorros representa la parte que querés invertir en criptomonedas?" %></h2>
+    <select id="porcentaje" name="porcentaje" class="select select-bordered w-full max-w-xs">
+      <option value="0"><%= gettext "Poco: menos del 30% de tus ahorros" %></option>
+      <option value="4" selected><%= gettext "Algo: entre 30% y 60% de sus ahorros" %></option>
+      <option value="8"><%= gettext "Mucho: mas del 60% de sus ahorros" %></option>
+    </select>
+  </div>
+  <div class="text-left my-8">
+    <h2 class="my-8"><%= gettext "¿Por cuánto tiempo aproximadamente mantendrías la inversión?" %></h2>
+    <select id="tiempo" name="tiempo" class="select select-bordered w-full max-w-xs">
+      <option value="0"><%= gettext "Muy corto plazo: Menos de 6 meses" %></option>
+      <option value="3" selected><%= gettext "Corto plazo: Entre 6 meses y un año" %></option>
+      <option value="6"><%= gettext "Mediano plazo: Entre 1 y 3 años" %></option>
+      <option value="8"><%= gettext "Lago plazo: Mas de 3 años" %></option>
+    </select>
+  </div>
+
+  <div class="text-left my-8">
+    <h2 class="my-8"><%= gettext "¿En cuáles de estos instrumentos/criptomonedas has invertido alguna vez?" %></h2>
+    <select id="historial" name="historial" class="select select-bordered w-full max-w-xs">
+      <option value="2"><%= gettext "Fondos comunes de inversion (FCI)" %></option>
+      <option value="4" selected><%= gettext "Bonos" %></option>
+      <option value="6"><%= gettext "Acciones" %></option>
+      <option value="7"><%= gettext "Bitcoin y/o Ethereum" %></option>
+      <option value="9"><%= gettext "Altcoins" %></option>
+      <option value="10"><%= gettext "Opciones y futuros" %></option>
+      <option value="0"><%= gettext "Ninguno" %></option>
+    </select>
+  </div>
+
+  <div class="text-left my-8">
+    <h2 class="my-8"><%= gettext "¿Cuál es tu experiencia inviertiendo en criptomonedas?" %></h2>
+    <select id="experiencia" name="experiencia" class="select select-bordered w-full max-w-xs">
+      <option value="0"><%= gettext "Nula: no conozco ni realicé nunca inversiones" %></option>
+      <option value="2" selected><%= gettext "Limitada: nunca realicé inversiones, pero conozco sobre algunas posibilidades de invertir " %></option>
+      <option value="4"><%= gettext "Buena: he realizado inversiones y conozco algunas alternativas de inversión" %></option>
+      <option value="6"><%= gettext "Excelente: tengo mucho conocimiento y experiencia en inversiones, y conozco los riesgos y rentabilidad" %></option>
+    </select>
+  </div>
+
+  <div class="text-left my-8">
+    <h2 class="my-8"><%= gettext "Cuándo invierto mi dinero, suelo estar" %></h2>
+    <select id="estado" name="estado" class="select select-bordered w-full max-w-xs">
+      <option value="0"><%= gettext "Mayormente preocupado por las pérdidas de valor de mi cartera" %></option>
+      <option value="4" selected><%= gettext "Preocupado por las pérdidas y ganancias de valor de mi cartera" %></option>
+      <option value="8"><%= gettext "Mayormente preocupado por las ganancias de valor de mi cartera" %></option>
+    </select>
+  </div>
+
+  <div class="text-left my-8">
+    <h2 class="my-8"><%= gettext "Suponiendo que una crisis golpeará fuertemente tu cartera de inversiones con una pérdida del 50% en poco tiempo ¿Qué harias?:" %></h2>
+    <select id="acciones" name="acciones" class="select select-bordered w-full max-w-xs">
+      <option value="0"><%= gettext "Vendería todas mis criptomonedas" %></option>
+      <option value="2" selected><%= gettext "Venderia parte de mis criptomonedas" %></option>
+      <option value="5"><%= gettext "Nada" %></option>
+      <option value="8"><%= gettext "Compraria más criptomonedas" %></option>
+    </select>
+  </div>
+
+  <div class="text-left my-8">
+    <h2 class="my-8"><%= gettext "Al momento de realizar una inversión, buscas:" %></h2>
+    <select id="busqueda" name="busqueda" class="select select-bordered w-full max-w-xs">
+      <option value="1"><%= gettext "Cubrir tu capital de la inflación y/o devaluación buscando el menor riesgo posible." %></option>
+      <option value="4" selected><%= gettext "Obtener un rendimiento superior a la inflación y/o devaluación aceptando arriesgar tu capital." %></option>
+      <option value="8"><%= gettext "Lograr un rendimiento considerablemente superior a la inflación y/o devaluación aceptando posibles pérdidas de capital." %></option>
+    </select>
+  </div>
+
+  <div class="text-left my-8">
+    <h2 class="my-8"><%= gettext "¿Cuánto tiempo del día dispones para estar pendiente de tus inversiones?" %></h2>
+    <select id="disposicion" name="disposicion" class="select select-bordered w-full max-w-xs">
+      <option value="0"><%= gettext "No tengo tiempo para nada" %></option>
+      <option value="2" selected><%= gettext "Tengo un tiempito, pero fuera de horario de oficina" %></option>
+      <option value="5"><%= gettext "Tengo tiempo para ver las pantallas en el horario laboral" %></option>
+      <option value="8"><%= gettext "Tengo todo el tiempo para dedicarme a esto" %></option>
+    </select>
+  </div>
+
+  <div class="text-left my-8">
+    <h2 class="my-8"><%= gettext "Dirías que tu actual capacidad de ahorro es de:" %></h2>
+    <select id="ahorro" name="ahorro" class="select select-bordered w-full max-w-xs">
+      <option value="1"><%= gettext "Menos de 1.000 USD al año " %></option>
+      <option value="5" selected><%= gettext "Entre 1.000 y 5.000 USD al año" %></option>
+      <option value="8"><%= gettext "Entre 5.000 y 10.000 USD al año" %></option>
+      <option value="10"><%= gettext "Más de 10.000 USD al año" %></option>
+    </select>
+  </div>
+
+  <div>
+    <div class="flex justify-center pt-12">
+      <button id="response_btn" class="rounded px-8 py-4 text-center bg-green-700 text-gray-100 hover:bg-green-900 hover:text-gray-50"><%= gettext "Obtener recomendacion" %></button>
+    </div>
+
+    <div id="response" class="hidden">
+      <div class="flex justify-between items-center mt-12">
+        <h2 class="text-xl"><%= gettext "Nuestra recomendacion basada en sus respuestas es que comience a invertir en:" %></h2>
+        <span id="totalPoints" class="text-green-500 font-bold text-xl text-center block py-8 px-8 bg-green-200"></span>
+      </div>
+      <%= link gettext("Cerrar el test"), to: Routes.page_path(@conn, :index), class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+</div>

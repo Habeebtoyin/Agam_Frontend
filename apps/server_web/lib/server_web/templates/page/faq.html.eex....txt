@@ -1,0 +1,67 @@
+<h2 class="my-8 text-3xl text-center" id="faq"> <%= gettext "Preguntas Frecuentes (FAQ)" %></h2>
+<div class="flex justify-center">
+
+  <div class="w-1/2 my-8 grid grid-cols-1 lg:grid-cols-2 lg:w-4/5 xl:w-2/3 grid-gap-4 place-items-center grid-flow-row-dense ">
+
+    <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Qué es Agam?" ), text: gettext( "Agam es un administrador automático de cartera, donde se producen intercambios descentralizados (DEX) en la red Polygon.
+Permite a cualquier persona con una billetera configurada en Polygon de Metamask comerciar instantáneamente a precios determinados por el mercado.
+Con el sistema que tiene Agam, en lugar de pagar las tarifas a los gerentes de activos para reequilibrar su cartera, cobrará tarifas de los comerciantes que reequilibran su cartera siguiendo las oportunidades de arbitraje.
+Cada inversión tiene un riesgo que el cliente debe conocer de antemano. Recomendamos hacer el Test del inversor. " ) } %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Qué es MetaMask?" ), text: gettext( "MetaMask es una extensión o plugin para navegadores web que permite a los usuarios interactuar fácilmente con las DApps de la blockchain de Ethereum. Con soporte para Firefox, Chrome, Opera y Brave, MetaMask ha acercado el mundo de las DApps al público en general." )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Qué es Polygon?" ), text: gettext( "Polygon, antes conocida como Red Matic o Matic Network es la primera plataforma bien estructurada y fácil de usar con la finalidad de aumentar la escalabilidad y el desarrollo de la infraestructura de Ethereum." )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Qué es DeFi?" ), text: gettext( "Las DeFi o Decentralized Finance (Finanzas Descentralizadas, en español) son una forma de finanzas que no dependen de intermediarios financieros centrales como corretajes, plataformas de intercambio (exchanges) o bancos, para ofrecer instrumentos financieros tradicionales, y en cambio, utilizan contratos inteligentes (smart contracts) en cadenas de bloques (blockchains), siendo Ethereum la más conocida.
+DeFi busca desarrollar pequeñas piezas financieras tradicionales pero con un grado extra de transparencia y descentralización. Estas pequeñas piezas, como si fueran piezas de Lego, son combinables entre sí, con el fin de desarrollar todo un ecosistema de pequeñas soluciones, que en su conjunto, formen una gran solución para las finanzas, invalidando la necesidad de instituciones financieras centralizadas y opacas que ya no aportan valor. " )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Tengo posibilidades de ser estafado?" ), text: gettext( "No. Invirtiendo en AGAM el cliente tiene la tranquilidad de estar inviertiendo en una plataforma de inversión con fundamentos. AGAM pone a disposición pools con distintos niveles de riesgo, donde es el cliente quien decide donde invertir su dinero, y cuando el mismo quiera retirarse puede hacerlo sin problemas." )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Qué sucede si hay un hackeo, y a causa de eso, ocurren pérdidas parciales o totales del dinero invertido dentro de AGAM?" ), text: gettext( "AGAM no se hace responsable ni garantiza recupero del capital del cliente en caso de un hackeo y robo de dinero en cualquiera de los pools, llamados fondos comunes de inversión." )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Qué es el Gas de una red de blockchain?" ), text: gettext( "El Gas de una red de blockchain se le llama al coste que tiene llevar a cabo una o varias operaciones en la red. Estas operaciones pueden ser desde hacer una transacción hasta crear una aplicación descentralizada o ejecutar un contrato inteligente (smart contract).
+Entonces, Gas es la unidad o “gasto” con la cual se mide el trabajo que se realiza en una red. Vale señalar que dependiendo el trabajo que se realice en la red requerirá más o menos uso de Gas, porque tendrá un coste computacional distinto." )} %>
+
+<%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Cómo se realiza el pago de las comisiones cuando inviento dinero en un fondo de inversión?" ), text: gettext( "El pago de las comisiones de depósito y extracción se ejecutan de manera automática, ya que están contempladas en el smart contract del pool en cuestión.
+Pools
+        -Comisión de depósito: 0.1%
+        -Comisión de retiro variable: 1% - 5%
+Trade
+        -Comisión de trade variable en función del slippage desde 0.1%" )} %>
+    
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Cuándo debo pagar el gas?" ), text: gettext( "El cliente deberá pagar el gas en todas las operaciones. Por ello, es recomendable que siempre conserve una cantidad de gas en su billetera descentralizada." )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Cuánto tiempo puedo permanecer en una inversión?" ), text: gettext( "Las inversiones no tienen un límite de estadía. El cliente puede mantenerse indefinidamente en la(s) inversion(es) que elija." )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "Luego de hacer el test del inversor y obtener una cartera recomendada para invertir ¿Necesariamente debo invertir en eso?" ), text: gettext( "No. El test del inversor es sólo una referencia para que el cliente pueda conocer su perfil e invertir en base al resultado obtenido. No obstante, el cliente puede hacer caso omiso y elegir la cartera de inversión que desee." )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Puedo ver dentro de AGAM en qué criptomonedas estoy invirtiendo?" ), text: gettext( "Si, el cliente podrá ver en la página web el valor de la tenencia mas lo intereses." )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Los fondos comunes de inversion (FCI) pueden sufrir cambios en el transcurso del tiempo?" ), text: gettext( "No, los FCI no cambiarán. En todo caso se agregaran FCI nuevos." )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Las inversiones realizadas en Agam tienen riesgos?" ), text: gettext( "Si. Mientras mayor es el riesgo, mayor es la rentabilidad; y si el cliente elije un riesgo elevado, debe saber que existe la posibilidad de que pierda de forma permamente gran parte o incluso la totalidad de la inversión." )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Qué es una pérdida impermanente?" ), text: gettext( "En pocas palabras, el término describe las pérdidas que los proveedores de liquidez pueden experimentar, debido a la divergencia de precios. La pérdida impermanente ocurre cuando los precios de sus tokens cambian en comparación al depósito inicial.
+Se llama pérdida impermanente porque la divergencia de precios entre los activos en el grupo puede eventualmente revertirse. Si eso sucede, se mitigan los efectos de la pérdida temporal. Tenga en cuenta que lo contrario no está garantizado. La pérdida impermanente también se llama pérdida por divergencia." )} %>
+
+<%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Cómo ocurre la pérdida impermanente?" ), text: gettext( "Los usuarios aportan sus activos a un fondo común de liquidez para convertirse en proveedores de liquidez (LP). A cambio, obtienen una parte de las tarifas de transacción que los comerciantes pagaron al grupo.
+Cuando el precio de los activos depositados en un fondo común de liquidez cambia en comparación con el momento en que los LP los depositaron, se produce una pérdida no permanente. Cuanto mayor sea este cambio, más expuestos estarán a pérdidas transitorias.
+Tenga en cuenta: la pérdida no permanente ocurre sin importar en qué dirección cambie el precio. Lo único que les importa a las pérdidas impermanentes es la relación de precios en relación con el momento del depósito." )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Cómo debo hacer si deseo pasar de un pool a otro? " ), text: gettext( "Para pasar de una cartera a otra, el cliente debe vender los fondos del pool del que desea salir, y luego ingresar al pool al que se desea entrar pagando las comisiones correspondientes." )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Hay un monto mínimo de ingreso?" ), text: gettext( "No hay monto mínimo de inversión." )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Qué son las criptomonedas?" ), text: gettext( "Las criptomonedas cumplen la función de una moneda, y de ahí que se las conozca con ese nombre. Sin embargo, es algo totalmente digital, que utiliza métodos criptográficos para asegurar sus transacciones financieras, controlar la creación de nuevas unidades y verificar la transferencia de activos." )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Qué es un Bridge?" ), text: gettext( "Los puentes blockchain permiten la interoperabilidad entre redes muy diferentes, como Bitcoin y Ethereum, y entre una cadena de bloques principal y su cadena secundaria, llamada cadena lateral, que opera bajo diferentes reglas de consenso o hereda su seguridad de la cadena de bloques principal (por ejemplo, acumulaciones integradas en Ethereum). Esta interoperabilidad podría incluir la transferencia de tokens, datos e incluso instrucciones de contratos inteligentes entre plataformas independientes, lo que permite a los usuarios:
+• Implementar activos digitales alojados en una cadena de bloques en Dapps en otra.
+• Realizar transacciones rápidas y de bajo costo de tokens alojados en cadenas que de otro modo serían menos escalables.
+• Ejecutar Dapps en más de una plataforma.
+Si bien algunos puentes blockchain están centralizados, otros conservan la importante descentralización que ayuda a garantizar la seguridad y la apertura de los protocolos DeFi.
+Se puede utilizar si es necesario un bridge: Evodefi, Xpollinate, OrbitChain, Matic Wallet, para pasar de la red BSC a Polygon y viceversa." )} %>
+
+        <%= render ServerWeb.SharedView, "_faq_component.html", %{title: gettext( "¿Qué es un Exchange?" ), text: gettext( "Los exchanges de criptomonedas, también conocidos como plataformas o mercados de intercambio, son plataformas digitales que permiten intercambiar monedas digitales por dinero fiat y/u otras criptomonedas o mercancías.  Generalmente se trata de plataformas centralizadas, las cuales pueden tener una dinámica automatizada muy parecida a la de otros tipos de plataformas de inversión (como las denominadas 'cripto-bolsas'), basarse en mecanismos que faciliten la compra y venta de persona a persona mediante sistemas de anuncios, puntuación y depósito de garantía." )} %>
+        
+</div>
+</div>

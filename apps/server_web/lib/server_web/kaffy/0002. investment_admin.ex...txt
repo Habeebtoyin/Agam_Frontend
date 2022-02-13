@@ -1,0 +1,25 @@
+defmodule ServerWeb.Kaffy.InvestAdmin do
+  @moduledoc false
+
+  def index(_) do
+    [
+      title: %{name: "Title", label: "Title of investment"},
+      body: %{name: "Description", label: "Investment description"},
+      created_at: %{
+        name: "Created at",
+        value: fn p -> Calendar.strftime(p.inserted_at, "%Y-%m-%d %H:%M:%S") end
+      },
+      img: %{name: "Background image", label: "Background image"},
+      likes: %{name: "Likes", label: "Count of likes"}
+    ]
+  end
+
+  def form_fields(_) do
+    [
+      title: %{type: :text, label: "Title"},
+      body: %{type: :text, rows: 20, create: :editable, label: "Description"},
+      img: %{label: "Url of background image", name: "Background image", type: :text},
+      likes: %{label: "Count of likes", name: "Likes", type: :integer}
+    ]
+  end
+end

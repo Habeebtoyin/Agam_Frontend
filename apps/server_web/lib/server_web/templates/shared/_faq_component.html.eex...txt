@@ -1,0 +1,12 @@
+<div class="mt-16" role="faq">
+  <div tabindex="0" class="border collapse w-96 rounded-box border-base-300 collapse-arrow"> 
+    <div class="flex text-xl font-medium collapse-title space-between ">
+      <p class="pr-4"><%= @title %></p>
+    </div> 
+    <div class="collapse-content"> 
+      <p class="leading-8">
+        <%= @text %>
+      </p>
+    </div>
+  </div> 
+</div>

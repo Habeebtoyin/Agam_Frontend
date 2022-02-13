@@ -1,0 +1,17 @@
+.news {
+	@apply px-12 py-10 bg-blue-500;
+}
+
+.news_slide {
+	@apply w-full bg-gray-100 rounded-lg;
+	> img {
+		@apply rounded-lg;
+	}
+
+	&_title {
+		@apply w-full pl-4 my-4 text-lg font-bold uppercase bg-gray-200 rounded-md;
+	}
+	&_text {
+		@apply px-4 pb-4 text-lg;
+	}
+}

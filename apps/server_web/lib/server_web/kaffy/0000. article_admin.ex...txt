@@ -1,0 +1,35 @@
+defmodule ServerWeb.Kaffy.ArticleAdmin do
+  @moduledoc false
+  alias Server.News
+
+  def insert(_conn, changeset) do
+    ret = News.create_article(changeset.changes)
+    {:ok, ret}
+  end
+
+  def index(_schema) do
+    [
+      title: %{name: "Title"},
+      body: %{name: "Body"},
+      published: %{name: "¿published?", filters: [{"Published", true}, {"Not published", false}]},
+      created_at: %{
+        name: "Created at",
+        value: fn p -> Calendar.strftime(p.inserted_at, "%Y-%m-%d %H:%M:%S") end
+      },
+      img: %{name: "image of the article"}
+    ]
+  end
+
+  def form_fields(_) do
+    [
+      title: nil,
+      body: %{type: :text, rows: 20, create: :editable},
+      published: %{
+        label: "is published?",
+        choices: [{"Published", true}, {"Not published", false}],
+        create: :hidden
+      },
+      img: %{label: "Image of the post", name: "Post image", type: :text}
+    ]
+  end
+end

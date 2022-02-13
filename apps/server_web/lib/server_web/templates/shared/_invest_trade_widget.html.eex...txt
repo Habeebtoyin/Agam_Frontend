@@ -1,0 +1,6 @@
+<div class="invest_trade_widget">
+    <div>
+      <span class="invest_trade_widget_invest">INVEST</span>
+      <span class="invest_trade_widget_trade">TRADE</span>
+    </div>
+  </div>

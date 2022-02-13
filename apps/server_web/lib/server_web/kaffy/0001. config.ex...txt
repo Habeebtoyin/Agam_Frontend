@@ -1,0 +1,30 @@
+defmodule ServerWeb.Kaffy.Config do
+  @moduledoc false
+  def create_resources(_conn) do
+    [
+      Noticias: [
+        # a custom name for this context/section.
+        name: "News",
+        # this line used to be "schemas" in pre v0.9
+        resources: [
+          Articulo: [schema: Server.News.Article, admin: ServerWeb.Kaffy.ArticleAdmin]
+        ]
+      ],
+      Inversiones: [
+        name: "Investments",
+        resources: [
+          Fondos: [schema: Server.Investment.InvestType, admin: ServerWeb.Kaffy.InvestAdmin]
+        ]
+      ],
+      Cuentas: [
+        name: "Accounts",
+        resources: [
+          Administradores: [
+            schema: Server.Accounts.User,
+            admin: ServerWeb.Kaffy.UsersAdmin
+          ]
+        ]
+      ]
+    ]
+  end
+end

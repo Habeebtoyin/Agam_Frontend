@@ -1,0 +1,60 @@
+defmodule ServerWeb.NewsControllerTest do
+  use ServerWeb.ConnCase
+  alias Server.News
+
+  @news [
+    %{title: "first news", body: "content of the first news", img: nil},
+    %{title: "second news", body: "content of the second news", img: nil},
+    %{title: "third news", body: "content of the third news", img: nil}
+  ]
+
+  defp create_fake_news do
+    for new <- @news do
+      News.create_article(new)
+    end
+  end
+
+  defp delete_fake_news do
+    Server.Repo.delete_all(Server.News.Article)
+  end
+
+  describe "news/index/2" do
+    test "index should have three news as minimun", %{conn: conn} do
+      conn = get(conn, Routes.news_path(conn, :index, :es))
+      assert html_response(conn, 200) =~ "Noticias recientes del mundo defi"
+    end
+
+    test "the news index page should return a list of news", %{conn: conn} do
+      create_fake_news()
+      conn = get(conn, Routes.news_path(conn, :index, :es))
+      assert html_response(conn, 200) =~ "first news"
+      assert html_response(conn, 200) =~ "second news"
+      assert html_response(conn, 200) =~ "third news"
+      delete_fake_news()
+    end
+
+    test "the news show all fields", %{conn: conn} do
+      create_fake_news()
+      conn = get(conn, Routes.news_path(conn, :index, :es))
+      assert html_response(conn, 200) =~ "first news"
+      assert html_response(conn, 200) =~ "content of the first news"
+      delete_fake_news()
+    end
+  end
+
+  describe "news/show/2" do
+    test "show item by id", %{conn: conn} do
+      article = %{
+        title: "fake title",
+        body: "fake body",
+        img: "https://images2.imgbox.com/74/cd/8oToKt9b_o.jpg"
+      }
+
+      {:ok, %Server.News.Article{id: id, title: title, body: body}} = News.create_article(article)
+      conn = get(conn, Routes.news_path(conn, :show, :es, id))
+      assert html_response(conn, 200) =~ title
+      assert html_response(conn, 200) =~ body
+      delete_fake_news()
+    end
+  end
+end

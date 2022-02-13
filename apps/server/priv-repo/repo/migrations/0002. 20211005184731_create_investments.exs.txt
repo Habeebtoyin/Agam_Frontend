@@ -1,0 +1,15 @@
+defmodule Server.Repo.Migrations.CreateInvestments do
+  use Ecto.Migration
+
+  def change do
+    create table(:investments, primary_key: false) do
+      add :id, :binary_id, primary_key: true
+      add :title, :string
+      add :body, :string
+      add :img, :string
+      add :likes, :integer
+
+      timestamps()
+    end
+  end
+end

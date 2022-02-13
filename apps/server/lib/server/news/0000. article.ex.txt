@@ -1,0 +1,24 @@
+defmodule Server.News.Article do
+  @moduledoc false
+  use Ecto.Schema
+  import Ecto.Changeset
+
+  @primary_key {:id, :binary_id, autogenerate: true}
+  @foreign_key_type :binary_id
+  schema "news" do
+    field(:body, :string)
+    field(:published, :boolean, default: false)
+    field(:img, :string)
+    field(:title, :string)
+
+    timestamps()
+  end
+
+  def changeset(article, attrs) do
+    article
+    |> cast(attrs, [:title, :img, :published, :body])
+    |> validate_length(:title, min: 5, max: 150)
+    |> validate_length(:body, min: 5)
+    |> validate_required([:title, :body])
+  end
+end

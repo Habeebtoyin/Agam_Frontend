@@ -1,0 +1,3 @@
+defmodule ServerWeb.InversorView do
+  use ServerWeb, :view
+end

@@ -1,0 +1,877 @@
+## "msgid"s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove "msgid"s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use "mix gettext.extract --merge" or "mix gettext.merge"
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+"Plural-Forms: nplurals=2\n"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_welcome.html.eex:6
+msgid "Bienvenidos Inversores"
+msgstr "Welcome Investors"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_welcome.html.eex:9
+msgid "Por ello te ofrecemos nuestros servicios para que puedas comenzar a invertir de forma facil y segura y sin necesidad de ser un experto en finanzas descentralizadas "
+msgstr "That is why we offer you our services so that you can start investing easily and safely and without having to be an expert in decentralized finance."
+
+#, elixir-format
+#: lib/server_web/templates/shared/_welcome.html.eex:9
+msgid "Sabemos"
+msgstr "We know"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_welcome.html.eex:9
+msgid "lo importante que es ganar dinero para ti"
+msgstr "HOW IMPORTANT IT IS TO EARN MONEY FOR YOU"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:12
+msgid "Algunas de sus ventajas frente a las finanzas tradicionales son:"
+msgstr "Some of its advantages over traditional finance are:"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:6
+msgid "Las finanzas descentralizadas (o defi) son un conjunto de aplicaciones basadas en redes blockchain"
+msgstr "decentralized finance (or defi) is a set of applications based on blockchain networks"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:7
+msgid "que no necesitan de intermediarios para funcionar, sino que al estar basados en la tecnología blockchain logran quitar del medio a los intermediarios como los bancos o los prestamistas. El auge de estos productos financieros, que tienen características similares a los servicios tradicionales, podría cambiar en cierta medida el sector de las finanzas y trae consigo oportunidades y desafíos."
+msgstr "that, in principle, do not need intermediaries to work, but being based on blockchain technology they manage to remove intermediaries such as banks or lenders from the environment. The rise of these financial products, which have characteristics similar to traditional services, could change the finance sector to some extent and brings with it opportunities and challenges."
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:4
+msgid "¿que es defi?"
+msgstr "WHAT IS DEFI?"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:93
+msgid "Conecte su wallet"
+msgstr "Connect your wallet"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:21
+msgid "Elimina a los intermediarios"
+msgstr "Cut out the middlemen"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:23
+msgid "La mayoría de los sistemas de finanzas descentralizadas se basan en la cadena de bloque de ethereum,\n          esto permite que las personas puedan intercambiar bienes y valores entre ellos por medio de aplicaciones descentralizadas \n          conocidas como smart contracts, quitando así la necesidad de entidades financieras tercearizadas."
+msgstr "Most decentralized finance systems are based on the ethereum blockchain, this allows people to exchange goods and values between them through decentralized applications known as smart contracts, thus removing the need for outsourced financial entities."
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:38
+msgid "Las aplicaciones conocidas como"
+msgstr "The applications known as"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:96
+msgid "Listo, ¡Ya esta invirtiendo!"
+msgstr "Done, you are already investing!"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:82
+msgid "Nuestra intención con esta plataforma, es facilitar el acceso a cualquier persona al mundo defi, tenga experiencia previa o no.\n          Para ello hemos creado y seleccionado cuidadosamente distintos tipos de inversiones pensadas para diferentes perfiles de inversores."
+msgstr "Our intention with this platform is to facilitate access to anyone to the world of defi, whether they have previous experience or not. For this we have carefully created and selected different types of investments designed for different investor profiles."
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:87
+msgid "Para ello, hemos simplificado el proceso para que cualquiera pueda participar, con tan solo 4 simples pasos: "
+msgstr "To do this, we have simplified the process so that anyone can participate, with just 4 simple steps:"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:66
+msgid "Puesto que los únicos mediadores del sistema son aplicaciones ejecutándose en una cadena de bloques, las comisiones son extremadamente bajas a comparación del sistema financiero tradicional. Esto es así porque lo único que suele abonarse es el costo de las transacciones también conocido como gas."
+msgstr "Since the only mediators in the system are applications running on a blockchain, the commissions are extremely low compared to the traditional financial system. This is so because the only thing that is usually paid is the cost of transactions, also known as gas."
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:53
+msgid "Puesto que no existen intermediarios que controlen y regulen quienes pueden participar, cualquier persona o entidad puede formar parte rápidamente\n          del sistema financiero de forma totalmente anónima. Permitiendo de esta manera que todas aquellas personas que han quedado fuera del sistema financiero tradicional tengan lugar dentro de esta nueva forma de economía."
+msgstr "Since there are no intermediaries that control and regulate who can participate, any person or entity can quickly become part of the financial system completely anonymously. Allowing in this way that all those people who have been left out of the traditional financial system take place within this new form of economy."
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:94
+msgid "Seleccione la inversion de su preferencia"
+msgstr "Select the investment of your preference"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:51
+msgid "Son abiertas a todo el mundo"
+msgstr "They are open to everyone"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:36
+msgid "Son totalmente transparentes"
+msgstr "They are totally transparent"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:64
+msgid "Tienen comisiones extremadamente bajas"
+msgstr "They have extremely low commissions"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:95
+msgid "Transfiera la cantidad deseada y haga click en invertir"
+msgstr "Transfer the desired amount and click on invest"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:26
+msgid "quitando así la necesidad de entidades financieras tercerizadas."
+msgstr "thus removing the need for outsourced financial entities."
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:38
+msgid "son completamente auditables e \n          imposibles de modificar una vez que ya estan ejecutandose en la cadena de bloques. \n          Esto permite que cualquier persona pueda leer la logica del contrato y asegurarse de que no existan clausulas ocultas o que luego de invertir\n          puedan cambiar las condiciones."
+msgstr "they are completely auditable and impossible to modify once they are already running on the blockchain. This allows anyone to read the logic of the contract and make sure that there are no hidden clauses or that after investing they can change the conditions."
+
+#, elixir-format
+#: lib/server_web/templates/shared/_introduction.html.eex:79
+msgid "¿Porque"
+msgstr "Why"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_inversion.html.eex:36
+msgid "Invertir"
+msgstr "invest"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_inversion.html.eex:5
+msgid "Seleccione el tipo de inversion que mas se adecue a su perfil"
+msgstr "Select the type of investment that best suits your profile"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_inversion.html.eex:27
+msgid "Usted puede retirar su inversion cuando desee"
+msgstr "You can withdraw your investment whenever you want"
+
+#, elixir-format
+#: lib/server_web/templates/page/about.html.eex:3
+#: lib/server_web/templates/shared/_footer.html.eex:8
+msgid "Acerca de nosotros"
+msgstr "About us"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:1
+#: lib/server_web/templates/shared/_footer.html.eex:6
+msgid "Preguntas Frecuentes (FAQ)"
+msgstr "Frequently Asked Questions (FAQ)"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_footer.html.eex:7
+msgid "Terminos y condiciones"
+msgstr "terms and Conditions"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_footer.html.eex:12
+msgid "Todos los derechos reservados."
+msgstr "All rights reserved."
+
+#, elixir-format
+#: lib/server_web/templates/shared/_header.html.eex:11
+msgid "Buscar mis inversiones"
+msgstr "Search my investments"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_header.html.eex:19
+msgid "Conectar mi billetera"
+msgstr "Connect my wallet"
+
+#, elixir-format
+#: lib/server_web/templates/page/terms.html.eex:41
+msgid "Al utilizar el sitio web, puede tener la tranquilidad que Agam no colocará cookies en su dispositivo. Las cookies son archivos de texto que contienen pequeñas cantidades de información que se descargan en su dispositivo cuando visita un sitio web. Luego, las cookies se envían de vuelta al sitio web de origen en cada visita posterior, o a otro sitio web que reconoce esa cookie."
+msgstr "By using the website, you can rest assured that Agam will not place cookies on your device. Cookies are text files containing small amounts of information that are downloaded to your device when you visit a website. The cookies are then sent back to the originating website on each subsequent visit, or to another website that recognizes that cookie."
+
+#, elixir-format
+#: lib/server_web/templates/page/terms.html.eex:30
+msgid "El valor de una inversión y los ingresos derivados de ella pueden tanto subir como bajar y es posible que los inversores no recuperen la cantidad invertida. \n      Debido a los riesgos involucrados, la inversión en un fondo común de Agam con riesgo moderado o agresivo, sólo es adecuada para inversores sofisticados que pueden soportar la pérdida de una parte sustancial o incluso de todo el dinero que invierten en el fondo sin alterar su nivel de vida, que entienden que el alto grado de riesgo involucrado es adecuado en función de sus objetivos de inversión y necesidades financieras, y no tienen necesidad de liquidez de las inversiones."
+msgstr "The value of an investment and the income derived from it can go up as well as down, and investors may not get back the amount invested. \n Due to the risks involved, investing in an Agam mutual fund with moderate or aggressive risk is only suitable for sophisticated investors who can bear the loss of a substantial part or even all of the money they invest in the fund without altering its level of life, who understands that the high degree of risk involved is appropriate based on their investment objectives and financial needs, and have no need for liquidity from investments."
+
+#, elixir-format
+#: lib/server_web/templates/page/terms.html.eex:14
+msgid "Estado reglamentario"
+msgstr "Regulatory status"
+
+#, elixir-format
+#: lib/server_web/templates/page/terms.html.eex:23
+msgid "Exactitud de la información"
+msgstr "Information accuracy"
+
+#, elixir-format
+#: lib/server_web/templates/page/terms.html.eex:33
+msgid "Garantías y seguros"
+msgstr "Guarantees and insurance"
+
+#, elixir-format
+#: lib/server_web/templates/page/terms.html.eex:5
+msgid "Información importante"
+msgstr "Important information"
+
+#, elixir-format
+#: lib/server_web/templates/page/terms.html.eex:36
+msgid "Información personal"
+msgstr "Personal information"
+
+#, elixir-format
+#: lib/server_web/templates/page/terms.html.eex:17
+msgid "Agam es un administrador automático de cartera, donde se producen intercambios descentralizados (DEX) en la red Polygon. Opera como broker, en fondos comunes de inversión, que consta de canastas de criptoactivos con distintos niveles de riesgo.\n      El dinero que el cliente envía con destino a invertir, va directamente a DeFi donde instantaneamente se descuenta la comisión que es enviada a una cuenta del negocio y el resto del dinero va hacia la canasta de inversión correspondiente. En ningún momento Agam retiene el dinero. \n      El sitio web tiene como fin ser una presentación a los distintos tipos de inversión en criptoactivos y la plataforma donde el cliente realiza la inversión. También se muestran noticias relevantes e información sobre el negocio. El cliente se registra, inicia sesión y luego realiza la inversión que el mismo desee. \n      Agam no se responsabiliza por pérdidas del dinero que el cliente envíe, u otros problemas, derivados de haber efectuado mal alguna operación, por eso es importante que lea detenidamente la explicación proveída en el tutorial."
+msgstr "Agam is an automatic portfolio manager, where decentralized exchanges (DEX) occur on the Polygon network. It operates as a broker, in mutual funds, consisting of baskets of crypto assets with different levels of risk. \n The money that the client sends to invest goes directly to DeFi where instantly the commission that is sent to a business account is discounted and the rest of the money goes to the corresponding investment. At any time does Agam hold the money. \n The website is intended to be a presentation of the different types of investment in crypto assets and the platform where the client invests. Relevant news and information about the business are also displayed. The client registers, logs in, and then makes the investment that he wants. \n Agam is not responsible for losses of the money that the client sends, or other problems, derived from having carried out a wrong operation, so it is important that you carefully read the explanation provided in the tutorial."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:20
+#: lib/server_web/templates/page/terms.html.eex:34
+msgid "Agam no se hace responsable ni garantiza recupero del capital del cliente en caso de un hackeo y robo de dinero en cualquiera de los fondos comunes de inversion."
+msgstr "Agam is not responsible or guarantees the recovery of the client's capital in the event of a hack and theft of money in any of the mutual funds."
+
+#, elixir-format
+#: lib/server_web/templates/page/terms.html.eex:37
+msgid "Agam y procesadores de datos que tienen acceso y están asociados con el procesamiento de datos personales, están obligados a respetar la confidencialidad de los datos personales."
+msgstr "Agam and data processors who have access to and are associated with the processing of personal data are obliged to respect the confidentiality of personal data."
+
+#, elixir-format
+#: lib/server_web/templates/page/terms.html.eex:8
+msgid "Lea esta información detenidamente, ya que rige el uso del sitio web de Agam. Si utiliza el sitio web, estará aceptando los Términos de uso que aparecen a continuación. Los Términos de uso están sujetos a cambios en cualquier momento sin previo aviso. Igualmente todas las novedades y noticias relevantes serán colocadas en el apartado News de la página web.\n      Las personas que ingresan a este sitio web deben consultar a sus asesores profesionales sobre si requieren algún consentimiento gubernamental o de otro tipo o si deben cumplir con cualquier formalidad que les permita usar o invertir en cualquier producto mencionado en el sitio web.\n      Siempre que haga una inversión, sepa dónde está colocando el dinero y nunca coloque dinero que necesite para las necesidades primarias, tales como alimentación, energía o deudas, por ejemplo.\n      Invirtiendo en Agam usted tiene la tranquilidad de estar inviertiendo en una plataforma de inversión con fundamentos. Agam invierte en canastas de criptomonedas con distinto nivel de riesgo. El nivel de riesgo lo elige el cliente, y para hacerlo bien, se recomienda hacer el Test del inversor."
+msgstr "Please read this information carefully because it governs your use of the Agam website. By using the website, you are agreeing to the Terms of Use below. The Terms of Use are subject to change at any time without prior notice. Likewise, all relevant news will be placed in the News section of the website. \n People entering this website should consult their professional advisers as to whether they require any governmental or other consent or whether they must comply with any formality that allows them to use or invest in any product mentioned on the website. \n  As long as you make an investment, know where you are putting the money and never put money that you need for primary needs, such as food, energy, or debts, for example."
+
+#, elixir-format
+#: lib/server_web/templates/page/terms.html.eex:29
+msgid "Riesgos de inversión"
+msgstr "Investment risks"
+
+#, elixir-format
+#: lib/server_web/templates/page/terms.html.eex:25
+msgid "Toda la información en el sitio web refleja el juicio de Agam en el momento en que dicha información se publicó en el sitio web o en la fecha indicada (si corresponde) y está sujeta a cambios sin previo aviso. Parte del material contenido en el sitio web, puede haber sido preparado por terceros. Agam no es responsable ni respalda el contenido de la información proporcionada por dichos terceros.\n      Si bien Agam considera que la información contenida en este sitio web se basa en fuentes que considera confiables, Agam no puede garantizar y no garantiza la precisión, oportunidad, adecuación o integridad de dicha información, ni Agam tiene la obligación de corregir, actualizar o complementar dicha información o notificarle cualquier cambio."
+msgstr "All information on the website reflects Agam's judgment at the time such information was published on the website or on the date indicated (if applicable) and is subject to change without notice. Some of the material contained on the website may have been prepared by third parties. Agam is not responsible neither endorses the content of the information provided by such third parties. \n Although Agam considers that the information contained in this website is based on sources that it considers reliable, Agam cannot and does not guarantee the accuracy, timeliness, adequacy, or completeness of such information, neither Agam is obliged to correct, update or supplement such information or notify you of any changes."
+
+#, elixir-format
+#: lib/server_web/templates/page/terms.html.eex:3
+msgid "Términos de uso"
+msgstr "Term of use"
+
+#, elixir-format
+#: lib/server_web/templates/page/about.html.eex:13
+msgid "Beneficio: maximizar el rendimiento para los inversores al tiempo que se tienen presentes las responsabilidades generales de la Compañía."
+msgstr "Profit: maximize returns for investors while keeping in mind the general corporate responsibility."
+
+#, elixir-format
+#: lib/server_web/templates/page/about.html.eex:28
+msgid "Calidad: búsqueda de la excelencia."
+msgstr "Quality: pursuit of excellence."
+
+#, elixir-format
+#: lib/server_web/templates/page/about.html.eex:22
+msgid "Crear valor y marcar la diferencia."
+msgstr "Create value and make a difference."
+
+#, elixir-format
+#: lib/server_web/templates/page/about.html.eex:27
+msgid "Integridad: ser transparentes y responsables."
+msgstr "Integrity: be transparent and responsible."
+
+#, elixir-format
+#: lib/server_web/templates/page/about.html.eex:5
+msgid "Agam es un administrador automático de cartera, donde se producen intercambios descentralizados (DEX) en la red Polygon.\n  Permite a cualquier persona con una billetera configurada en Polygon de Metamask comerciar instantáneamente a precios determinados por el mercado.\n  Con el sistema que tiene Agam, en lugar de pagar las tarifas a los gerentes de activos para reequilibrar su cartera, cobrará tarifas de los comerciantes que reequilibran su cartera siguiendo las oportunidades de arbitraje."
+msgstr "Agam is an automatic portfolio manager, where decentralized exchanges (DEX) occur on the Polygon network. \n It allows anyone with a wallet set up in Metamask's Polygon to instantly trade at market-determined prices. \n With the system that Agam has, instead of paying fees to asset managers to rebalance your portfolio, fees are charged from the traders who rebalance your portfolio by following arbitrage opportunities."
+
+#, elixir-format
+#: lib/server_web/templates/page/about.html.eex:20
+msgid "Llegar a inversores de todo el mundo."
+msgstr "Expand to investors around the world."
+
+#, elixir-format
+#: lib/server_web/templates/page/about.html.eex:19
+msgid "Llegar al pequeño inversor que no cuenta con experiencia en criptomonedas o en finanzas en general."
+msgstr "Reach to the small investor who does not have experience in cryptocurrencies or in general finance."
+
+#, elixir-format
+#: lib/server_web/templates/page/about.html.eex:21
+msgid "Lograr mejorar las finanzas personales del cliente."
+msgstr "Improve the client's personal finances."
+
+#, elixir-format
+#: lib/server_web/templates/page/about.html.eex:29
+msgid "Mejora continua: ofrecer el mejor y más actualizado servicio al cliente"
+msgstr "Continuous improvement: offer the best and most up-to-date customer service."
+
+#, elixir-format
+#: lib/server_web/templates/page/about.html.eex:11
+msgid "Misión"
+msgstr "Mission"
+
+#, elixir-format
+#: lib/server_web/templates/page/about.html.eex:14
+msgid "Productividad: ser una organización eficaz, dinámica y en constante crecimiento."
+msgstr "Productivity: striving to be an efficient, dynamic, and constantly growing organization."
+
+#, elixir-format
+#: lib/server_web/templates/page/about.html.eex:17
+msgid "Visión"
+msgstr "View"
+
+#, elixir-format
+#: lib/server_web/templates/page/about.html.eex:25
+msgid "Valores"
+msgstr "Values"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:76
+msgid "Brave browser es un navegador rápido, por no decir el más rápido del mercado. En las versiones de escritorio, alcanza velocidades más altas que Google Chrome y Mozilla Firefox. En las versiones para los dispositivos móviles, el navegador Brave es tan rápido como cualquiera de sus competidores."
+msgstr "Brave browser is a fast browser, if not the fastest on the market. On desktop versions, it reaches higher speeds than Google Chrome and Mozilla Firefox. In the versions for mobile devices, the Brave browser is as fast as any of its competitors."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:34
+msgid "Cuándo esté inviertiendo en un fondo de inversión, ¿puedo ver en la página web en que criptomonedas se están inviertiendo?"
+msgstr "When I am investing in an investment fund, can I see on the website which cryptocurrencies are being invested in?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:22
+msgid "El Gas de una red de blockchain se le llama al coste que tiene llevar a cabo una o varias operaciones en la red. Estas operaciones pueden ser desde hacer una transacción hasta crear una aplicación descentralizada o ejecutar un contrato inteligente (smart contract).\nEntonces, Gas es la unidad o “gasto” con la cual se mide el trabajo que se realiza en una red. Vale señalar que dependiendo el trabajo que se realice en la red requerirá más o menos uso de Gas, porque tendrá un coste computacional distinto."
+msgstr "The Gas of a blockchain network is called the cost of carrying out one or more operations on the network. These operations can range from making a transaction to creating a decentralized application or executing a smart contract. \n So, Gas is the unit or 'expense' with which the work done in a network is measured. It is worth noting that depending on the work carried out on the network, it will require more or less use of Gas, because it will have a different computational cost."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:28
+msgid "El cliente que retire su dinero parcial o totalmente, no debe pagar comisión y solo debe pagar el Gas."
+msgstr "The client who withdraws his money partially or totally, does not have to pay commission and only has to pay the Gas."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:40
+msgid "En pocas palabras, el término describe las pérdidas que los proveedores de liquidez pueden experimentar, debido a la divergencia de precios. La pérdida impermanente ocurre cuando los precios de sus tokens cambian en comparación al depósito inicial.\nSe llama pérdida impermanente porque la divergencia de precios entre los activos en el grupo puede eventualmente revertirse. Si eso sucede, se mitigan los efectos de la pérdida temporal. Tenga en cuenta que lo contrario no está garantizado. La pérdida impermanente también se llama pérdida por divergencia."
+msgstr "In short words, the term describes the losses that liquidity providers may experience, due to price divergence. The permanent loss occurs when the prices of your tokens change compared to the initial deposit. \n It is called an impermanent loss because the price divergence between the assets in the group can eventually be reversed. If that happens, the effects of the temporary loss are mitigated. Please note that the opposite is not guaranteed. Impermanent loss is also called divergence loss."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:6
+msgid "Agam es un administrador automático de cartera, donde se producen intercambios descentralizados (DEX) en la red Polygon.\nPermite a cualquier persona con una billetera configurada en Polygon de Metamask comerciar instantáneamente a precios determinados por el mercado.\nCon el sistema que tiene Agam, en lugar de pagar las tarifas a los gerentes de activos para reequilibrar su cartera, cobrará tarifas de los comerciantes que reequilibran su cartera siguiendo las oportunidades de arbitraje.\nCada inversión tiene un riesgo que el cliente debe conocer de antemano. Recomendamos hacer el Test del inversor. "
+msgstr "Agam is an automatic portfolio manager, where decentralized exchanges (DEX) occur on the Polygon network. \n It allows anyone with a wallet set up in Metamask's Polygon to instantly trade at market-determined prices. \n With the system that Agam has, instead of paying fees to asset managers to rebalance your portfolio, fees are charged from the traders who rebalance your portfolio by following arbitrage opportunities."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:25
+msgid "La comisión por invertir en un Fondo común de inversion (FCI) es del 0.05% del Gas del depósito.\nEn el caso del Trade la comisión del intercambio o swap será del 0.01% del Gas del mismo."
+msgstr "The commission for investing in a Common Investment Fund (FCI) is 0.05% of the deposit. \n In the case of Trade, the commission of the exchange or swap will be 0.01% of the same."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:15
+msgid "Las DeFi o Decentralized Finance (Finanzas Descentralizadas, en español) son una forma de finanzas que no dependen de intermediarios financieros centrales como corretajes, plataformas de intercambio (exchanges) o bancos, para ofrecer instrumentos financieros tradicionales, y en cambio, utilizan contratos inteligentes (smart contracts) en cadenas de bloques (blockchains), siendo Ethereum la más conocida.\nDeFi busca desarrollar pequeñas piezas financieras tradicionales pero con un grado extra de transparencia y descentralización. Estas pequeñas piezas, como si fueran piezas de Lego, son combinables entre sí, con el fin de desarrollar todo un ecosistema de pequeñas soluciones, que en su conjunto, formen una gran solución para las finanzas, invalidando la necesidad de instituciones financieras centralizadas y opacas que ya no aportan valor. "
+msgstr "DeFi or Decentralized Finance are a form of finance that does not depend on central financial intermediaries such as brokerages, exchange platforms or banks, to offer traditional financial instruments, and instead, use smart contracts in blockchains, with Ethereum being the best known. \n DeFi seeks to develop small traditional financial pieces but with an extra degree of transparency and decentralization. These small pieces, as if they were Lego pieces, are combinable with each other, in order to develop an entire ecosystem of small solutions, which together, form a great solution for finances, invalidating the need for centralized and opaque financial institutions that no longer add value."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:64
+msgid "Las criptomonedas cumplen la función de una moneda, y de ahí que se las conozca con ese nombre. Sin embargo, es algo totalmente digital, que utiliza métodos criptográficos para asegurar sus transacciones financieras, controlar la creación de nuevas unidades y verificar la transferencia de activos."
+msgstr "Cryptocurrencies fulfill the function of a currency, and hence they are known by that name. However, it is something totally digital, using cryptographic methods to secure your financial transactions, control the creation of new units, and verify the transfer of assets."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:30
+msgid "Las inversiones no tienen un límite de estadía. El cliente puede mantenerse indefinidamente en la(s) inversion(es) que elija."
+msgstr "Investments do not have a stay limit. The client can stay indefinitely in the investment (s) of his choice."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:74
+msgid "Los exchanges de criptomonedas, también conocidos como plataformas o mercados de intercambio, son plataformas digitales que permiten intercambiar monedas digitales por dinero fiat y/u otras criptomonedas o mercancías.  Generalmente se trata de plataformas centralizadas, las cuales pueden tener una dinámica automatizada muy parecida a la de otros tipos de plataformas de inversión (como las denominadas 'cripto-bolsas'), basarse en mecanismos que faciliten la compra y venta de persona a persona mediante sistemas de anuncios, puntuación y depósito de garantía."
+msgstr "Cryptocurrency exchanges, also known as exchange platforms or markets, are digital platforms that allow you to exchange digital currencies for fiat money and/or other cryptocurrencies or merchandise. \n These are generally centralized platforms, which can have an automated dynamics very similar to that of other types of investment platforms (such as the so-called 'crypto-exchanges'), based on mechanisms that facilitate the purchase and sale of person to person through ad, scoring and escrow systems."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:66
+msgid "Los puentes blockchain permiten la interoperabilidad entre redes muy diferentes, como Bitcoin y Ethereum, y entre una cadena de bloques principal y su cadena secundaria, llamada cadena lateral, que opera bajo diferentes reglas de consenso o hereda su seguridad de la cadena de bloques principal (por ejemplo, acumulaciones integradas en Ethereum). Esta interoperabilidad podría incluir la transferencia de tokens, datos e incluso instrucciones de contratos inteligentes entre plataformas independientes, lo que permite a los usuarios:\n• Implementar activos digitales alojados en una cadena de bloques en Dapps en otra.\n• Realizar transacciones rápidas y de bajo costo de tokens alojados en cadenas que de otro modo serían menos escalables.\n• Ejecutar Dapps en más de una plataforma.\nSi bien algunos puentes blockchain están centralizados, otros conservan la importante descentralización que ayuda a garantizar la seguridad y la apertura de los protocolos DeFi.\nSe puede utilizar si es necesario un bridge: Evodefi, Xpollinate, OrbitChain, AscenDEX, Matic Wallet, para pasar de la red BSC a Polygon y viceversa."
+msgstr "Blockchain bridges allow interoperability between very different networks, such as Bitcoin and Ethereum, and between a main blockchain and its secondary chain, called the side chain, which operates under different consensus rules or inherits its security from the main blockchain (for example, built-in stacks in Ethereum). This interoperability could include the transfer of tokens, data, and even smart contract instructions between independent platforms, allowing users to: \n ? Implement digital assets hosted on one blockchain in Dapps on another. \n ? Conduct low-cost and fast transactions of tokens hosted on chains that would otherwise be less scalable. \n ? Run Dapps on more than one platform. \n While some blockchain bridges are centralized, others retain the important decentralization that helps ensure the security and openness of DeFi protocols. \n It can be used if a bridge is necessary: Evodefi, Xpollinate, OrbitChain, AscenDEX, Matic Wallet, to go from the BSC network to Polygon and vice versa."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:43
+msgid "Los usuarios aportan sus activos a un fondo común de liquidez para convertirse en proveedores de liquidez (LP). A cambio, obtienen una parte de las tarifas de transacción que los comerciantes pagaron al grupo.\nCuando el precio de los activos depositados en un fondo común de liquidez cambia en comparación con el momento en que los LP los depositaron, se produce una pérdida no permanente. Cuanto mayor sea este cambio, más expuestos estarán a pérdidas transitorias.\nEsta divergencia de precios puede brindar oportunidades rentables a los comerciantes o arbitrajistas. Pueden ejecutar el comercio de arbitraje hasta que el precio del token vuelva a estar en línea con el mercado en general. Esto da como resultado una pérdida temporal para los proveedores de liquidez.\nEjemplo resuelto de pérdida impermanente\nUsemos un fondo de liquidez construido sobre un sistema AMM de producto constante como ejemplo. Este AMM utiliza una fórmula relativamente simple como mecanismo de precios:\nx * y = k\nEsta fórmula se utiliza para calcular los precios de los dos activos digitales en el fondo de liquidez. En esta fórmula de precios, k es constante. Esto significa que la multiplicación de los dos activos contenidos en el grupo (x multiplicado por y) siempre debe ser la misma (k) antes y después de que se ejecute una operación.\nSupongamos que los dos activos digitales en el grupo de liquidez son ETH y DAI, y deposita 1 ETH y 100 DAI. Este tipo de AMM requiere que los dos activos depositados mantengan una relación 1:1, lo que significa que 1 ETH = 100 DAI. Dado que 1 DAI = 1 USD, sus activos depositados ahora están valorados en $200.\nAhora imagine que el grupo total contiene 10 ETH y 1,000 DAI, lo que equivale a $ 2,000. Esto significa que tiene una participación del 10% en el grupo. La constante es k = 10 (ETH) * 1000 (DAI) = 10,000, que siempre debe ser igual antes y después de una transacción en el grupo.\nSupongamos que el precio de ETH sube a 400 DAI. Según la fórmula de AMM, el precio de ETH en el grupo sigue siendo de 100 DAI. En este momento, los arbitrajistas pueden comprar ETH a un precio más bajo del grupo de liquidez hasta que el precio del token vuelva a estar en línea con el precio externo.\nSi ignoramos las tarifas de transacción, habrá 5 ETH y 2,000 DAI en el fondo de liquidez. Al mismo tiempo, la constante k sigue siendo 10.000.\nSi decide retirar fondos durante este tiempo, ahora puede retirar 0.5 ETH y 200 DAI (10% del grupo), lo que combinados equivalen a $ 400 (sin incluir las tarifas). Eso no parece tan malo, ¡pero espera! Si hubiera hecho Hold (conservar su tenencia) en lugar de depositar estos tokens, ahora tendría $ 500 en activos. Entonces, así es como puede perder $ 100 en comparación con solo tener sus tokens, y esto es lo que llamamos pérdida impermanente.\nTarifas de negociación en pérdidas impermanentes\nEl ejemplo anterior ignora las tarifas de negociación que habría ganado por proporcionar liquidez. En muchos casos, las comisiones devengadas anularían las pérdidas y, no obstante, harían rentable la provisión de liquidez. Aun así, es fundamental comprender la pérdida temporal antes de proporcionar liquidez a un protocolo AMM.\nTenga en cuenta: la pérdida no permanente ocurre sin importar en qué dirección cambie el precio. Lo único que les importa a las pérdidas impermanentes es la relación de precios en relación con el momento del depósito."
+msgstr "Users contribute their assets to a liquidity pool to become liquidity providers (LP). In return, they get a portion of the transaction fees that merchants paid to the group. \n When the price of assets deposited in a liquidity pool changes compared to when the LPs were deposited, there is a non-permanent loss. The greater this change, the more exposed they will be to temporary losses. \n This price divergence can provide profitable opportunities for traders or arbitrageurs. They can run the arbitrage trade until the token price is back in line with the broader market. This results in a temporary loss for liquidity providers. \n Resolved Example of Impermanent Loss \n Let's use a liquidity fund built on a constant output AMM system as an example. This AMM uses a relatively simple formula as a pricing mechanism: \n \nx * y = k\n This formula is used to calculate the prices of the two digital assets in the liquidity pool. In this price formula, k is constant. This means that the multiplication of the two assets contained in the group (x multiplied by y) must always be the same (k) before and after a trade is executed. \n Let’s suppose the two digital assets in the liquidity pool are ETH and DAI, and you deposit 1 ETH and 100 DAI. This type of MMA requires that the two deposited assets maintain a 1: 1 ratio, which means that 1 ETH = 100 DAI. Since 1 DAI = 1 USD, your deposited assets are now valued at $ 200. \n Now imagine that the total pool contains 10 ETH and 1,000 DAI, which equals $ 2,000. This means that it has a 10% stake in the group. The constant is k = 10 (ETH) * 1000 (DAI) = 10,000, which must always be the same before and after a transaction in the group. \n Let’s suppose the price of ETH rises to 400 DAI. According to the AMM formula, the price of ETH in the pool is still 100 DAI. At this time, arbitrageurs can buy ETH at a lower price from the liquidity pool until the price of the token is back in line with the external price. \n If we ignore the transaction fees, there will be 5 ETH and 2,000 DAI in the liquidity pool. At the same time, the constant k remains 10,000. \n If you decide to withdraw funds during this time, you can now withdraw 0.5 ETH and 200 DAI (10% of the pool), which combined is equal to $ 400 (not including fees). That doesn't seem so bad, but wait! If you had held (keep your tenure) instead of depositing these tokens, you would now have $ 500 in assets. So this is how you can lose $ 100 compared to just having your tokens, and this is what we call an impermanent loss. \n Trading fees on impermanent losses \n The example above ignores the trading fees you would have earned for providing liquidity. In many cases, the accrued commissions would cancel out the losses and yet make the provision of liquidity profitable. Still, it is critical to understand temporary loss before providing liquidity to an AMM protocol. \n Please note: non-permanent loss occurs no matter in which direction the price changes. The only thing that matters to impermanent losses is the relationship of prices in relation to the time of deposit."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:32
+msgid "Luego de hacer el test del inversor y obtener una cartera recomendada para invertir ¿Necesariamente debo invertir en eso?"
+msgstr "After doing the investor profile test and obtaining a recommended portfolio to invest in, do I necessarily have to invest in that?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:11
+msgid "MetaMask es una extensión o plugin para navegadores web que permite a los usuarios interactuar fácilmente con las DApps de la blockchain de Ethereum. Con soporte para Firefox, Chrome, Opera y Brave, MetaMask ha acercado el mundo de las DApps al público en general."
+msgstr "MetaMask is an extension or plugin for web browsers that allows users to easily interact with DApps on the Ethereum blockchain. With support for Firefox, Chrome, Opera, and Brave, MetaMask has brought the world of DApps closer to the general public."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:62
+msgid "No hay monto mínimo de inversión."
+msgstr "There is no minimum investment amount."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:36
+msgid "No, los FCI no cambiarán. En todo caso se agregaran FCI nuevos."
+msgstr "No, the mutual funds will not change. In any case, new mutual funds will be added."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:32
+msgid "No. El test del inversor es sólo una referencia para que el cliente pueda ver que perfil tiene para invertir y recomendamos actuar en base al resultado obtenido. No obstante, el cliente puede hacer caso omiso y elegir la cartera de inversión que desee."
+msgstr "No. The investor profile test is only a reference so that the client can see what profile they have to invest in and we recommend acting based on the result obtained. However, the client can ignore it and choose the investment portfolio one want."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:18
+msgid "No. Invirtiendo en Agam el cliente tiene la tranquilidad de estar inviertiendo en una plataforma de inversión con fundamentos. Agam invierte en canastas de criptomonedas con distinto nivel de riesgo. Agam protege en todo momento el dinero del cliente, y cuando el mismo quiera retirarse, puede hacerlo sin problemas."
+msgstr "No. By investing in Agam the client has the peace of mind of investing in an investment platform with fundamentals. Agam invests in baskets of cryptocurrencies with different levels of risk. Agam protects the client's money all the time, and when he wants to withdraw, he can do it without problems."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:60
+msgid "Para pasar de una cartera a otra, el cliente debe vender los fondos del FCI del que desea salir, y luego ingresar al FCI al que se desea entrar pagando la comisión correspondiente."
+msgstr "To move from one portfolio to another, the client must sell the funds of the mutual fund from which he wishes to exit, and then enter the mutual fund to which he wishes to enter, paying the corresponding commission."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:13
+msgid "Polygon, antes conocida como Red Matic o Matic Network es la primera plataforma bien estructurada y fácil de usar con la finalidad de aumentar la escalabilidad y el desarrollo de la infraestructura de Ethereum.  Su componente principal es Polygon SDK, un sistema que admite la creación de múltiples tipos de aplicaciones."
+msgstr "Polygon, formerly known as Matic Network, is the first well-structured and easy-to-use platform in order to increase the scalability and development of the Ethereum infrastructure. Its main component is the Polygon SDK, a system that supports the creation of multiple types of applications."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:28
+msgid "Si deseo extraer parcial o totalmente mi dinero ¿Debo pagar comisión y/o Gas?"
+msgstr "If I want to withdraw partially or totally my money, do I have to pay commission and/or Gas?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:34
+msgid "Si, el cliente podrá ver en la página web el valor de la tenencia mas lo intereses."
+msgstr "Yes, the client will be able to see the value of the holding plus interest on the website."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:38
+msgid "Si. Las inversiones en criptomonedas tienen una elevada volatilidad y el riesgo lo elije el cliente. Mientras mayor es el riesgo, mayor es la rentabilidad; y si el cliente elije un riesgo elevado, debe saber que existe la posibilidad de que pierda de forma permamente gran parte o incluso la totalidad de la inversión."
+msgstr "Yes. Investments in cryptocurrencies have a high volatility and the risk is chosen by the client. The greater the risk, the greater the profitability; and if the client chooses a high risk, he must know that there is a possibility that he permanently loses a large part or even all of the investment."
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:30
+msgid "¿Cuánto tiempo puedo permanecer en una inversión?"
+msgstr "How long can I stay in an investment?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:60
+msgid "¿Cómo debo hacer si deseo pasar de un fondo común de inversión a otro? "
+msgstr "How should I do if I want to move from one mutual fund to another?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:43
+msgid "¿Cómo ocurre la pérdida impermanente?"
+msgstr "How does permanent loss occur?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:25
+msgid "¿Cómo se realiza el pago de las comisiones cuando inviento dinero en un fondo de inversión?"
+msgstr "How do I pay commissions when I invest money in an investment fund?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:62
+msgid "¿Hay un monto mínimo de ingreso?"
+msgstr "Is there a minimum income amount?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:38
+msgid "¿Las inversiones realizadas en Agam tienen riesgos?"
+msgstr "Do the investments made in Agam have risks?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:36
+msgid "¿Los fondos comunes de inversion (FCI) pueden sufrir cambios en el transcurso del tiempo?"
+msgstr "Can mutual funds change over time?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:76
+msgid "¿Qué es Brave?"
+msgstr "What is Brave?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:15
+msgid "¿Qué es DeFi?"
+msgstr "What is DeFi?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:6
+msgid "¿Qué es Agam?"
+msgstr "What is Agam?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:11
+msgid "¿Qué es MetaMask?"
+msgstr "What is MetaMask?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:13
+msgid "¿Qué es Polygon?"
+msgstr "What is Polygon?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:22
+msgid "¿Qué es el Gas de una red de blockchain?"
+msgstr "What is the Gas of a blockchain network?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:66
+msgid "¿Qué es un Bridge?"
+msgstr "What is a bridge?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:74
+msgid "¿Qué es un Exchange?"
+msgstr "What is an Exchange?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:40
+msgid "¿Qué es una pérdida impermanente?"
+msgstr "What is an impermanent loss?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:64
+msgid "¿Qué son las criptomonedas?"
+msgstr "What are cryptocurrencies?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:20
+msgid "¿Qué sucede si hay un hackeo, y a causa de eso, pérdidas parciales o totales del dinero invertido dentro de Agam?"
+msgstr "What happens if there is a hack, and as a result, partial or total losses of the money invested within Agam?"
+
+#, elixir-format
+#: lib/server_web/templates/page/faq.html.eex:18
+msgid "¿Tengo posibilidades de ser estafado?"
+msgstr "Can I be scammed?"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:11
+#: lib/server_web/templates/inversor/index.html.eex:11
+msgid "0 a 1000 usd"
+msgstr "From 0 to 1000 USD"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:12
+#: lib/server_web/templates/inversor/index.html.eex:12
+msgid "1000 - 2000 usd"
+msgstr "From 1000 to 2000 USD"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:13
+#: lib/server_web/templates/inversor/index.html.eex:13
+msgid "2000 - 5000 usd"
+msgstr "From 2000 to 5000 USD"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:41
+#: lib/server_web/templates/inversor/index.html.eex:41
+msgid "Acciones"
+msgstr "Actions"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:79
+#: lib/server_web/templates/inversor/index.html.eex:79
+msgid "Al momento de realizar una inversión, buscas:"
+msgstr "When you make an investment, you look for"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:22
+#: lib/server_web/templates/inversor/index.html.eex:22
+msgid "Algo: entre 30% y 60% de sus ahorros"
+msgstr "Something: between 30 and 60% of your savings "
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:43
+#: lib/server_web/templates/inversor/index.html.eex:43
+msgid "Altcoins"
+msgstr "Altcoins"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:42
+#: lib/server_web/templates/inversor/index.html.eex:42
+msgid "Bitcoin y/o Ethereum"
+msgstr "Bitcoin or Ethereum"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:40
+#: lib/server_web/templates/inversor/index.html.eex:40
+msgid "Bonos"
+msgstr "Bonds"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:54
+#: lib/server_web/templates/inversor/index.html.eex:54
+msgid "Buena: he realizado inversiones y conozco algunas alternativas de inversión"
+msgstr "Good: I have made investments and I know some investment alternatives"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:117
+#: lib/server_web/templates/inversor/index.html.eex:117
+msgid "Cerrar el test"
+msgstr "Close test"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:74
+#: lib/server_web/templates/inversor/index.html.eex:74
+msgid "Compraria más criptomonedas"
+msgstr "I would buy more cryptocurrencies"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:30
+#: lib/server_web/templates/inversor/index.html.eex:30
+msgid "Corto plazo: Entre 6 meses y un año"
+msgstr "Short term: between 6 months and 1 year"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:81
+#: lib/server_web/templates/inversor/index.html.eex:81
+msgid "Cubrir tu capital de la inflación y/o devaluación buscando el menor riesgo posible."
+msgstr "Cover your capital against inflation and/or devaluation seeking the least possible risk"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:98
+#: lib/server_web/templates/inversor/index.html.eex:98
+msgid "Dirías que tu actual capacidad de ahorro es de:"
+msgstr "Would you say that your current saving capacity is"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:101
+#: lib/server_web/templates/inversor/index.html.eex:101
+msgid "Entre 1.000 y 5.000 USD al año"
+msgstr "Between 1,000 and 5,000 USD per year"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:102
+#: lib/server_web/templates/inversor/index.html.eex:102
+msgid "Entre 5.000 y 10.000 USD al año"
+msgstr "Between 5,000 and 10,000 USD per year"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:55
+#: lib/server_web/templates/inversor/index.html.eex:55
+msgid "Excelente: tengo mucho conocimiento y experiencia en inversiones, y conozco los riesgos y rentabilidad"
+msgstr "Excellent: I have a lot of knowledge and experience in investments, and I know the risks and profitability"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:39
+#: lib/server_web/templates/inversor/index.html.eex:39
+msgid "Fondos comunes de inversion (FCI)"
+msgstr "Common investment funds "
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:32
+#: lib/server_web/templates/inversor/index.html.eex:32
+msgid "Lago plazo: Mas de 3 años"
+msgstr "Long term: more than 3 years"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:53
+#: lib/server_web/templates/inversor/index.html.eex:53
+msgid "Limitada: nunca realicé inversiones, pero conozco sobre algunas posibilidades de invertir "
+msgstr "Limited: I have never made investments, but I know about some possibilities of investing"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:83
+#: lib/server_web/templates/inversor/index.html.eex:83
+msgid "Lograr un rendimiento considerablemente superior a la inflación y/o devaluación aceptando posibles pérdidas de capital."
+msgstr "Achieve a return considerably higher than inflation and/or devaluation accepting possible capital losses"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:14
+#: lib/server_web/templates/inversor/index.html.eex:14
+msgid "Mas de 5000 usd"
+msgstr "More than 5000 USD"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:64
+#: lib/server_web/templates/inversor/index.html.eex:64
+msgid "Mayormente preocupado por las ganancias de valor de mi cartera"
+msgstr "Mostly concerned about my portfolio value gains"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:62
+#: lib/server_web/templates/inversor/index.html.eex:62
+msgid "Mayormente preocupado por las pérdidas de valor de mi cartera"
+msgstr "Mostly concerned about the loss of the value of my portfolio"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:31
+#: lib/server_web/templates/inversor/index.html.eex:31
+msgid "Mediano plazo: Entre 1 y 3 años"
+msgstr "Medium-term: between 1 and 3 years"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:100
+#: lib/server_web/templates/inversor/index.html.eex:100
+msgid "Menos de 1.000 USD al año "
+msgstr "Less than 1,000 USD per year"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:23
+#: lib/server_web/templates/inversor/index.html.eex:23
+msgid "Mucho: mas del 60% de sus ahorros"
+msgstr "A lot: more than 60% of your savings"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:29
+#: lib/server_web/templates/inversor/index.html.eex:29
+msgid "Muy corto plazo: Menos de 6 meses"
+msgstr "Very short term: less than 6 months"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:103
+#: lib/server_web/templates/inversor/index.html.eex:103
+msgid "Más de 10.000 USD al año"
+msgstr "More than 10,000 USD per year"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:73
+#: lib/server_web/templates/inversor/index.html.eex:73
+msgid "Nada"
+msgstr "Nothing"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:45
+#: lib/server_web/templates/inversor/index.html.eex:45
+msgid "Ninguno"
+msgstr "None"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:90
+#: lib/server_web/templates/inversor/index.html.eex:90
+msgid "No tengo tiempo para nada"
+msgstr "I don't have time for anything"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:114
+#: lib/server_web/templates/inversor/index.html.eex:114
+msgid "Nuestra recomendacion basada en sus respuestas es que comience a invertir en:"
+msgstr "Our recommendation based on your answers is that you start investing in"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:52
+#: lib/server_web/templates/inversor/index.html.eex:52
+msgid "Nula: no conozco ni realicé nunca inversiones"
+msgstr "Null: I do not know or have never made investments"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:109
+#: lib/server_web/templates/inversor/index.html.eex:109
+msgid "Obtener recomendacion"
+msgstr "Get recommendation"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:82
+#: lib/server_web/templates/inversor/index.html.eex:82
+msgid "Obtener un rendimiento superior a la inflación y/o devaluación aceptando arriesgar tu capital."
+msgstr "Obtain a return higher than inflation and/or devaluation by agreeing to risk your capital."
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:44
+#: lib/server_web/templates/inversor/index.html.eex:44
+msgid "Opciones y futuros"
+msgstr "Options and Futures"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:21
+#: lib/server_web/templates/inversor/index.html.eex:21
+msgid "Poco: menos del 30% de tus ahorros"
+msgstr "Little: less than 30% of your savings"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:63
+#: lib/server_web/templates/inversor/index.html.eex:63
+msgid "Preocupado por las pérdidas y ganancias de valor de mi cartera"
+msgstr "Worried about the losses and gains of the value of my portfolio"
+
+#, elixir-format
+#: lib/server_web/templates/shared/_inversion.html.eex:24
+msgid "Seleccione el tipo de inversion que mejor se adecue a su perfil.\nDisponemos de varios modelos de inversiones, algunos mas conservadores y otros mas agresivos."
+msgstr "Select the type of investment that best suits your profile. We have several investment models, some more conservative and others more aggressive."
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:3
+#: lib/server_web/templates/inversor/index.html.eex:3
+msgid "Si recien esta comenzando a invertir en criptomonedas,"
+msgstr "If you are just starting to invest in cryptocurrencies"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:69
+#: lib/server_web/templates/inversor/index.html.eex:69
+msgid "Suponiendo que una crisis golpeará fuertemente tu cartera de inversiones con una pérdida del 50% en poco tiempo ¿Qué harias?:"
+msgstr "Assuming that a crisis will hit your investment portfolio hard with a loss of 50% in a short time, what would you do?"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:92
+#: lib/server_web/templates/inversor/index.html.eex:92
+msgid "Tengo tiempo para ver las pantallas en el horario laboral"
+msgstr "I have time to see the screens during business hours"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:93
+#: lib/server_web/templates/inversor/index.html.eex:93
+msgid "Tengo todo el tiempo para dedicarme a esto"
+msgstr "I have all the time to dedicate myself to this"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:91
+#: lib/server_web/templates/inversor/index.html.eex:91
+msgid "Tengo un tiempito, pero fuera de horario de oficina"
+msgstr "I have a little time, but outside office hours"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:72
+#: lib/server_web/templates/inversor/index.html.eex:72
+msgid "Venderia parte de mis criptomonedas"
+msgstr "I would sell part of my cryptocurrencies"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:71
+#: lib/server_web/templates/inversor/index.html.eex:71
+msgid "Vendería todas mis criptomonedas"
+msgstr "I would sell all my cryptocurrencies"
+
+#, elixir-format
+#: lib/server_web/live/page_live.html.leex:2
+msgid "Welcome to %{name}!"
+msgstr ""
+
+# msgid "Welcome to %{name}!"
+# msgstr "Bienvenido "
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:4
+#: lib/server_web/templates/inversor/index.html.eex:4
+msgid "lo invitamos a completar este breve cuestionario que nos permitira recomendarle el tipo de inversion que mas se adapte a su perfil."
+msgstr "We invite you to complete this brief questionnaire that will allow us to recommend the type of investment that best suits your profile."
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:50
+#: lib/server_web/templates/inversor/index.html.eex:50
+msgid "¿Cuál es tu experiencia inviertiendo en criptomonedas?"
+msgstr "What is your experience investing in cryptocurrencies?"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:88
+#: lib/server_web/templates/inversor/index.html.eex:88
+msgid "¿Cuánto tiempo del día dispones para estar pendiente de tus inversiones?"
+msgstr "How much time of the day do you have to be aware of your investments?"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:37
+#: lib/server_web/templates/inversor/index.html.eex:37
+msgid "¿En cuáles de estos instrumentos/criptomonedas has invertido alguna vez?"
+msgstr "In which of these instruments/cryptocurrencies have you ever invested?"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:27
+#: lib/server_web/templates/inversor/index.html.eex:27
+msgid "¿Por cuánto tiempo aproximadamente mantendrías la inversión?"
+msgstr "For approximately how long would you keep the investment?"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:19
+#: lib/server_web/templates/inversor/index.html.eex:19
+msgid "¿Qué porcentaje de tus ahorros representa la parte que querés invertir en criptomonedas?"
+msgstr "What percentage of your savings represents the part you want to invest in cryptocurrencies?"
+
+#, elixir-format
+#: lib/server_web/templates/inversor/index.html.eex:60
+#: lib/server_web/templates/inversor/index.html.eex:60
+msgid "Cuándo invierto mi dinero, suelo estar"
+msgstr "When I invest my money, I am:"
+
+#, elixir-format, fuzzy
+#: lib/server_web/templates/inversor/index.html.eex:9
+#: lib/server_web/templates/inversor/index.html.eex:9
+msgid "¿Cuanto dinero desea comenzar a invertir en criptomonedas?"
+msgstr "If you are just starting to invest in cryptocurrencies"

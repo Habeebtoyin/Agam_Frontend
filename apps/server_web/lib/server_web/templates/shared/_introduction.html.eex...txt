@@ -1,0 +1,99 @@
+<div class="flex flex-col items-center justify-between mb-8">
+  <div class="flex justify-center mb-8">
+    <div class="w-2/3">
+      <h2 class="mb-16 text-3xl font-bold text-center uppercase text-primary"><%= gettext "¿que es defi?" %>  </h2>
+      <p class="mb-16 text-xl">
+        <%= gettext "Las finanzas descentralizadas (o defi) son un conjunto de aplicaciones basadas en redes" %>
+         <span class="font-bold"> blockchain</span> <%= gettext "que no necesitan de intermediarios para funcionar, sino que al estar basados en la tecnología blockchain logran quitar del medio a los intermediarios como los bancos o los prestamistas. El auge de estos productos financieros, que tienen características similares a los servicios tradicionales, podría cambiar en cierta medida el sector de las finanzas y trae consigo oportunidades y desafíos." %> 
+      </p>
+    </div> 
+  </div>
+
+  <h2 class="px-4 text-2xl text-center lg:mb-24"> <%= gettext "Algunas de sus ventajas frente a las finanzas tradicionales son:"%></h2>
+
+  <div class="max-w-3xl mb-8 grid grid-cols-1 lg:grid-cols-2 gap-4 xl:grid-cols-4 xl:max-w-full ">
+
+    <div class="text-center shadow-2xl card">
+      <figure class="px-10 pt-10 r">
+        <img src="<%= Routes.static_path(@conn, "/images/defi.jpg") %>" class="rounded-xl">
+      </figure> 
+      <div class="card-body">
+        <h2 class="card-title"> <%= gettext "Elimina a los intermediarios"%></h2> 
+        <p class="text-xl">
+          <%= gettext "La mayoría de los sistemas de finanzas descentralizadas se basan en la cadena de bloque de ethereum,
+          esto permite que las personas puedan intercambiar bienes y valores entre ellos por medio de aplicaciones descentralizadas 
+          conocidas como"%>
+           <span class="font-bold">smart contracts</span>, <%= gettext "quitando así la necesidad de entidades financieras tercearizadas."%> 
+        </p> 
+      </div>
+    </div> 
+
+    <div class="text-center shadow-2xl card">
+      <figure class="px-10 pt-10 r">
+        <img src="<%= Routes.static_path(@conn, "/images/blockchain.jpg") %>" class="rounded-xl">
+      </figure> 
+      <div class="card-body">
+        <h2 class="card-title"> <%= gettext "Son totalmente transparentes"%></h2> 
+        <p class="text-xl">
+          <%= gettext "Las aplicaciones conocidas como" %> <span class="font-bold">Smart Contracts</span> (contratos inteligentes), <%= gettext "son completamente auditables e 
+          imposibles de modificar una vez que ya estan ejecutandose en la cadena de bloques. 
+          Esto permite que cualquier persona pueda leer la logica del contrato y asegurarse de que no existan clausulas ocultas o que luego de invertir
+          puedan cambiar las condiciones." %> 
+        </p> 
+      </div>
+    </div>
+
+    <div class="text-center shadow-2xl card">
+      <figure class="px-10 pt-10 r">
+        <img src="<%= Routes.static_path(@conn, "/images/blockchain_open.jpg") %>" class="rounded-xl">
+      </figure> 
+      <div class="card-body">
+        <h2 class="card-title"> <%= gettext "Son abiertas a todo el mundo" %></h2> 
+        <p class="text-xl">
+          <%= gettext "Puesto que no existen intermediarios que controlen y regulen quienes pueden participar, cualquier persona o entidad puede formar parte
+          del sistema financiero de forma rápida y totalmente anónima. Permitiendo de esta manera que todas aquellas personas que han quedado fuera del sistema financiero tradicional tengan lugar dentro de esta nueva forma de economía." %>
+        </p> 
+      </div>
+    </div>
+
+    <div class="text-center shadow-2xl card">
+      <figure class="px-10 pt-10 r">
+        <img src="<%= Routes.static_path(@conn, "/images/blockchain_comisiones.jpg") %>" class="rounded-xl">
+      </figure> 
+      <div class="card-body">
+        <h2 class="card-title"> <%= gettext "Tienen comisiones extremadamente bajas" %></h2> 
+        <p class="text-xl">
+          <%= gettext "Puesto que los únicos mediadores del sistema son aplicaciones ejecutándose en una cadena de bloques, las comisiones son extremadamente bajas a comparación del sistema financiero tradicional. Esto es así porque lo único que suele abonarse es el costo de las transacciones también conocido como gas." %>
+        </p> 
+      </div>
+    </div>
+  </div>
+
+
+
+<svg  class="transform rotate-180" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" ><path  d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill" fill="#FFFFFF" fill-opacity="1"></path></svg>
+
+  <div class="flex flex-col items-center justify-center h-screen bg-white">
+    <div class="flex justify-center pt-8 mb-8 bg-white text-primary-content">
+      <div class="w-2/3">
+        <h2 class="mb-4 text-2xl"> <%= gettext "¿Porque" %> <span class="font-bold text-center text-primary">Agam?</span></h2>
+
+        <p class="block mt-8 text-xl">
+          <%= gettext "Nuestra intención con esta plataforma, es facilitar el acceso a cualquier persona al mundo defi, tenga experiencia previa o no.
+          Para ello hemos creado y seleccionado cuidadosamente distintos tipos de inversiones totalmente pensadas para diferentes perfiles de inversores." %>
+        </p>
+
+        <p class="block mt-8 text-xl">
+          <%= gettext "Para ello, hemos simplificado el proceso para que cualquiera pueda participar, con tan solo 4 simples pasos: " %>
+        </p>
+      </div>
+
+    </div>
+    <ul class="w-2/3 mt-8 steps">
+      <li class="font-bold text-gray-800 step step-primary"> <%= gettext "Conecte su wallet" %></li> 
+      <li class="font-bold text-gray-800 step step-secondary"><%= gettext "Seleccione la inversion de su preferencia" %></li> 
+      <li class="font-bold text-gray-800 step step-accent"> <%= gettext "Transfiera la cantidad deseada y haga click en invertir" %></li> 
+      <li class="font-bold text-gray-800 step step-done"> <%= gettext "Listo, ¡Ya esta invirtiendo!"%></li>
+    </ul>
+  </div>
+</div>

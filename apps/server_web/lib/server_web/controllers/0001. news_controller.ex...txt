@@ -1,0 +1,15 @@
+defmodule ServerWeb.NewsController do
+  use ServerWeb, :controller
+  alias Server.News
+
+  def index(conn, _) do
+    list_of_news = News.list_news()
+    render(conn, "index.html", news: list_of_news)
+  end
+
+  def show(conn, %{"id" => id}) do
+    article = News.get_article!(id)
+    news = News.list_news()
+    render(conn, "show.html", article: article, news: news)
+  end
+end

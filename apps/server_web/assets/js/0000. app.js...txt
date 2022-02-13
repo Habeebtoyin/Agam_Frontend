@@ -1,0 +1,119 @@
+// We need to import the CSS so that webpack will load it.
+// The MiniCssExtractPlugin is used to separate it out into
+// its own CSS file.
+import "../css/app.scss"
+
+// webpack automatically bundles all modules in your
+// entry points. Those entry points can be configured
+// in "webpack.config.js".
+//
+// Import deps with the dep name or local files with a relative path, for example:
+//
+//     import {Socket} from "phoenix"
+//     import socket from "./socket"
+//
+// ------------- Esto va 
+import "phoenix_html"
+//import {Socket} from "phoenix"
+//import topbar from "topbar"
+//import {LiveSocket} from "phoenix_live_view"
+
+//let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
+//let liveSocket = new LiveSocket("/live", Socket, {params: {_csrf_token: csrfToken}})
+
+// Show progress bar on live navigation and form submits
+//topbar.config({barColors: {0: "#29d"}, shadowColor: "rgba(0, 0, 0, .3)"})
+//window.addEventListener("phx:page-loading-start", info => topbar.show())
+//window.addEventListener("phx:page-loading-stop", info => topbar.hide())
+
+// connect if there are any LiveViews on the page
+//liveSocket.connect()
+
+// expose liveSocket on window for web console debug logs and latency simulation:
+// >> liveSocket.enableDebug()
+// >> liveSocket.enableLatencySim(1000)  // enabled for duration of browser session
+// >> liveSocket.disableLatencySim()
+//window.liveSocket = liveSocket
+
+// --------------------- hasta aca ----------
+
+const translate_web = () => {
+  console.log(window.location);
+  let pathname = window.location.pathname.split("/");
+  pathname[1] = pathname[1] == "es" ? "en" : "es";
+  location.pathname = pathname.join("/")
+}
+
+window.addEventListener('DOMContentLoaded', (event) => {
+
+  //const menu_elements = ["menu_btn", "menu_body", "translate_btn", "translate_btn_movile", "logo"];
+  //let [menu_btn, menu_body, translate_btn, translate_btn_movile] = menu_elements.map(element => document.getElementById(element));
+
+  menu_btn.addEventListener('click', () =>  {
+    menu_body.classList.toggle('hidden');
+  })
+
+  translate_btn.addEventListener('click', translate_web)
+  translate_btn_movile.addEventListener('click', translate_web)
+
+  logo.addEventListener('click', () => location.pathname="/")
+
+  darkmode_btn.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    document.documentElement.classList.toggle('dark');
+  });
+
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+
+});
+
+response_btn.addEventListener('click', evt => {
+  evt.preventDefault();
+
+  // getValueFrom :: DomElement -> Number
+  const getValueFrom = elem => {
+    let select = document.getElementById(elem);
+    let value = select.options[select.selectedIndex].value;
+    return parseInt(value);
+  }
+
+  // addPoints :: Number -> Number -> Number
+  const addPoints = (a , b) =>  parseInt(a + b)
+
+  const getRecomendation = points => {
+    let message = '';
+    if (points <= 39) message = 'CARTERAS CONSERVADORAS';
+    if (points > 39 && points <= 59 ) message = 'CARTERAS MODERADAS';
+    if (points >= 60) message = 'CUALQUIER CARTERA';
+
+    return message;
+  }
+
+  const totalPoints = document.getElementById("totalPoints");
+  const total =
+    ["invertir", "porcentaje", "tiempo", "historial", "experiencia", "estado", "acciones", "busqueda", "disposicion", "ahorro"]
+    .map(getValueFrom)
+    .reduce(addPoints, 0)
+
+  totalPoints.innerText = `${getRecomendation(total)}`
+  response.classList.remove('hidden');
+})
+
+
+
+
+
+
+
+// Whenever the user explicitly chooses light mode
+//localStorage.theme = 'light'
+
+// Whenever the user explicitly chooses dark mode
+//localStorage.theme = 'dark'
+
+// Whenever the user explicitly chooses to respect the OS preference
+//localStorage.removeItem('theme')

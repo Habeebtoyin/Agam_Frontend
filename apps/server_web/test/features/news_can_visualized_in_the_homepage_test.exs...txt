@@ -1,0 +1,3 @@
+defmodule ServerWeb.NewsCanVisualizedInTheHomepageTest do
+  use ServerWeb.FeatureCase, async: true
+end

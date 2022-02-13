@@ -1,0 +1,20 @@
+<div class="flex items-center justify-center h-screen min-w-full mt-12">
+  <div class="mx-8">
+    <h1 class="my-8 text-2xl font-bold">Reenviar las intrucciones de confirmacion</h1>
+
+    <%= form_for :user, Routes.user_confirmation_path(@conn, :create), fn f -> %>
+      <%= label f, :email, class: "mr-4" %>
+      <%= email_input f, :email, required: true, class: "w-80 mb-8" %>
+
+      <div class="flex justify-around w-80">
+        <div>
+          <%= submit "Enviar las instrucciones", class: "text-blue-500 font-bold" %>
+        </div>
+      <% end %>
+
+      <p>
+        <%= link "Iniciar session", to: Routes.user_session_path(@conn, :new), class: "text-blue-500 font-bold"  %>
+      </p>
+      </div>
+  </div>
+</div>

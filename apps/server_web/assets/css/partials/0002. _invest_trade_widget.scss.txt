@@ -1,0 +1,13 @@
+.invest_trade_widget {
+	@apply flex justify-center;
+	> div {
+		@apply block;
+	}
+
+	&_invest {
+		@apply p-4 border-2 border-r-0 border-blue-500 rounded-md;
+	}
+	&_trade {
+		@apply p-4 text-gray-100 bg-blue-500 border-2 border-l-0 border-gray-100 rounded-md;
+	}
+}

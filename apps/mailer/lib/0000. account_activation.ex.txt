@@ -1,0 +1,12 @@
+defmodule Mailer.AccountActivation do
+  @moduledoc false
+  import Swoosh.Email
+
+  def activate_account(user, msg) do
+    new()
+    |> to({user.name, user.email})
+    |> from({"Administrador", "admin@agam.com"})
+    |> subject("Administration account activation")
+    |> text_body(msg)
+  end
+end

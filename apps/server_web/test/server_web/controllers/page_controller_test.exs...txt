@@ -1,0 +1,84 @@
+defmodule ServerWeb.PageContollerTest do
+  use ServerWeb.ConnCase
+
+  describe "index" do
+    test "GET / redirect to /es", %{conn: conn} do
+      conn = get(conn, Routes.page_path(conn, :index))
+      assert redirected_to(conn) =~ "/es"
+    end
+
+    test "GET /es contains Bienvenidos Inversores" do
+      conn = get(build_conn(), "/es")
+      assert html_response(conn, 200) =~ "Bienvenidos Inversores"
+    end
+
+    test "GET /en contains Welcome Investors" do
+      conn = get(build_conn(), "/en")
+      assert html_response(conn, 200) =~ "Welcome Investors"
+    end
+
+    test "GET /es/about contains 'Acerca de nosotros'" do
+      conn = get(build_conn(), "/es/about")
+      assert html_response(conn, 200) =~ "Acerca de nosotros"
+    end
+
+    test "GET /en/about contains 'About us'" do
+      conn = get(build_conn(), "/en/about")
+      assert html_response(conn, 200) =~ "About us"
+    end
+
+    test "GET /es/terms contains 'Términos de uso'" do
+      conn = get(build_conn(), "/es/terms")
+      assert html_response(conn, 200) =~ "Términos de uso"
+    end
+
+    test "GET /en/terms contains 'Terms of use'" do
+      conn = get(build_conn(), "/en/terms")
+      assert html_response(conn, 200) =~ "Term of use"
+    end
+
+    test "GET /es/faq contains 'Preguntas Frecuentes (FAQ)'" do
+      conn = get(build_conn(), "/es/faq")
+      assert html_response(conn, 200) =~ "Preguntas Frecuentes (FAQ)"
+    end
+
+    test "GET /en/faq contains 'Frequently Asked Questions (FAQ)'" do
+      conn = get(build_conn(), "/en/faq")
+      assert html_response(conn, 200) =~ "Frequently Asked Questions (FAQ)"
+    end
+
+    test "Header exists in all pages" do
+      conn = get(build_conn(), "/es/faq")
+      assert html_response(conn, 200) =~ "Conectar mi billetera"
+
+      conn = get(build_conn(), "/en/faq")
+      assert html_response(conn, 200) =~ "Connect my wallet"
+
+      conn = get(build_conn(), "/es/about")
+      assert html_response(conn, 200) =~ "Conectar mi billetera"
+
+      conn = get(build_conn(), "/en/about")
+      assert html_response(conn, 200) =~ "Connect my wallet"
+
+      conn = get(build_conn(), "/es/terms")
+      assert html_response(conn, 200) =~ "Conectar mi billetera"
+
+      conn = get(build_conn(), "/en/terms")
+      assert html_response(conn, 200) =~ "Connect my wallet"
+    end
+
+    test "Footer exists in all pages" do
+      conn = get(build_conn(), "/es")
+      assert html_response(conn, 200) =~ "2022 - AGAM"
+
+      conn = get(build_conn(), "/es/about")
+      assert html_response(conn, 200) =~ "2022 - AGAM"
+
+      conn = get(build_conn(), "/es/faq")
+      assert html_response(conn, 200) =~ "2022 - AGAM"
+
+      conn = get(build_conn(), "/es/terms")
+      assert html_response(conn, 200) =~ "2022 - AGAM"
+    end
+  end
+end

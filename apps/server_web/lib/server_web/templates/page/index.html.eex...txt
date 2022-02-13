@@ -1,0 +1,4 @@
+<%= render ServerWeb.SharedView, "_welcome.html", assigns %>
+<%= render ServerWeb.SharedView, "_introduction.html", assigns %>
+<%= render ServerWeb.SharedView, "_inversion.html", assigns %>
+<%= render ServerWeb.SharedView, "_news.html", assigns %>

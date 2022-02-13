@@ -1,0 +1,18 @@
+.steps_component {
+	@apply flex flex-col justify-around min-h-full mx-12 bg-white my-28;
+
+	> div {
+		@apply flex;
+	}
+
+	&_icon {
+		@apply flex items-center justify-center flex-grow-0 flex-shrink-0 block w-10 h-10 mr-4 text-center bg-red-200 rounded-full;
+	}
+
+	&_title {
+		@apply text-2xl text-blue-400 uppercase;
+	}
+	&_text {
+		@apply text-xl;
+	}
+}

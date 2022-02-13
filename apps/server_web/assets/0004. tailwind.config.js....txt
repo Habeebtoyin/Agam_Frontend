@@ -1,0 +1,41 @@
+module.exports = {
+  //mode: 'jit',
+  purge: [
+   "../**/*.html.eex",
+   "../**/*.html.leex",
+    "../**/views/**/*.ex",
+    "../**/live/**/*.ex",
+    "./js/**/*.js"
+  ],
+  darkMode: 'class', // or 'media' or 'class'
+  theme: {
+    extend: {
+      backgroundImage: theme => ({
+        'hero-desktop-dark': "url(/images/bg_normal.jpg)",
+        'hero-desktop-light': "url(/images/aggresive.jpg)"
+      })
+      //backgroundColor: theme => ({
+        //'footer': "#333333"
+      //}),
+      //colors: {
+        //'primary': '#556573',
+        //'secondary': '#F2F2F2',
+        //'orange': {
+          //'100': '#F29985',
+          //'200': '#F28963',
+          //'300': '#F26849'
+        //}
+      //}
+    },
+    fontFamily: {
+      'display': ['PT Sans', 'sans-serif']
+    }
+  },
+  variants: {
+    extend: {
+    },
+  },
+  plugins: [
+    require("daisyui")
+  ],
+}

@@ -1,0 +1,41 @@
+<div class="w-2/3 pt-8 mx-auto">
+
+  <%= form_for @conn, Routes.user_session_path(@conn, :create), [as: :user], fn f -> %>
+    <%= if @error_message do %>
+      <div class="text-red-500 alert alert-danger">
+        <p>Error: <%= @error_message %></p>
+      </div>
+    <% end %>
+
+    <div class="flex justify-center min-w-full">
+      <div>
+        <h1 class="my-8 text-2xl font-bold ">Iniciar Session</h1>
+
+        <div class="mt-8" >
+          <%= label f, :email, class: "block" %>
+          <%= email_input f, :email, required: true, class: "text-gray-900" %>
+        </div>
+
+        <div class="mt-8">
+          <%= label f, :password , class: "block" %>
+          <%= password_input f, :password,  required: true, class: "text-gray-900"  %>
+        </div>
+
+        <div class="mt-8">
+          <%= checkbox f, :remember_me, class: "mr-4" %>
+          <%= label f, :remember_me, "Mantenerme logueado durante 60 dias", class: "break-words" %>
+        </div>
+
+        <div class="pt-4">
+          <p>
+            <%#= link "Register", to: Routes.user_registration_path(@conn, :new) %> 
+            <%= submit "ingresar", class: "mr-4 text-blue-500" %>
+            <%= link "Olvidaste tu contraseña?", to: Routes.user_reset_password_path(@conn, :new), class: "text-blue-500" %>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  
+</div>

@@ -1,0 +1,81 @@
+defmodule Server.InvestmentTest do
+  use Server.DataCase
+
+  alias Server.Investment
+
+  describe "investments" do
+    alias Server.Investment.InvestType
+
+    @valid_attrs %{body: "some body", img: "some img", likes: 42, title: "some title"}
+    @update_attrs %{
+      body: "some updated body",
+      img: "some updated img",
+      likes: 43,
+      title: "some updated title"
+    }
+    @invalid_attrs %{body: nil, img: nil, likes: nil, title: nil}
+
+    def invest_type_fixture(attrs \\ %{}) do
+      {:ok, invest_type} =
+        attrs
+        |> Enum.into(@valid_attrs)
+        |> Investment.create_invest_type()
+
+      invest_type
+    end
+
+    test "list_investments/0 returns all investments" do
+      invest_type = invest_type_fixture()
+      assert Investment.list_investments() == [invest_type]
+    end
+
+    test "get_invest_type!/1 returns the invest_type with given id" do
+      invest_type = invest_type_fixture()
+      assert Investment.get_invest_type!(invest_type.id) == invest_type
+    end
+
+    test "create_invest_type/1 with valid data creates a invest_type" do
+      assert {:ok, %InvestType{} = invest_type} = Investment.create_invest_type(@valid_attrs)
+      assert invest_type.body == "some body"
+      assert invest_type.img == "some img"
+      assert invest_type.likes == 42
+      assert invest_type.title == "some title"
+    end
+
+    test "create_invest_type/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Investment.create_invest_type(@invalid_attrs)
+    end
+
+    test "update_invest_type/2 with valid data updates the invest_type" do
+      invest_type = invest_type_fixture()
+
+      assert {:ok, %InvestType{} = invest_type} =
+               Investment.update_invest_type(invest_type, @update_attrs)
+
+      assert invest_type.body == "some updated body"
+      assert invest_type.img == "some updated img"
+      assert invest_type.likes == 43
+      assert invest_type.title == "some updated title"
+    end
+
+    test "update_invest_type/2 with invalid data returns error changeset" do
+      invest_type = invest_type_fixture()
+
+      assert {:error, %Ecto.Changeset{}} =
+               Investment.update_invest_type(invest_type, @invalid_attrs)
+
+      assert invest_type == Investment.get_invest_type!(invest_type.id)
+    end
+
+    test "delete_invest_type/1 deletes the invest_type" do
+      invest_type = invest_type_fixture()
+      assert {:ok, %InvestType{}} = Investment.delete_invest_type(invest_type)
+      assert_raise Ecto.NoResultsError, fn -> Investment.get_invest_type!(invest_type.id) end
+    end
+
+    test "change_invest_type/1 returns a invest_type changeset" do
+      invest_type = invest_type_fixture()
+      assert %Ecto.Changeset{} = Investment.change_invest_type(invest_type)
+    end
+  end
+end

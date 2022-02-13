@@ -1,0 +1,18 @@
+defmodule ServerWeb.UserVisitsHomepageTest do
+  use ExUnit.Case, async: true
+  use Wallaby.Feature
+
+  @tag :skip
+  feature "user can visit homepage", %{session: session} do
+    session
+    |> visit("/")
+    |> assert_has(Query.css("h1", text: "Bienvenidos Inversores"))
+  end
+
+  @tag :skip
+  feature "find the about page on the footer", %{session: session} do
+    session
+    |> visit("/es")
+    |> take_screenshot()
+  end
+end
